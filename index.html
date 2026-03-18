@@ -271,7 +271,7 @@
             </div>
         </section>
 
-        <!-- VEILLE TECHNOLOGIQUE (AVEC LES 3 FLUX RSS DYNAMIQUES) -->
+        <!-- VEILLE TECHNOLOGIQUE (100% AUTOMATISÉE ET ILLUSTRÉE) -->
         <section id="veille" class="hidden animate-fadeIn max-w-6xl mx-auto px-4 py-16">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-600 font-bold px-4 py-2 rounded-full mb-6 border border-indigo-100">
@@ -279,7 +279,7 @@
                 </div>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">L'évolution de la <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Cybersécurité</span> dans les réseaux</h2>
                 <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                    Dans un contexte où les cyberattaques se multiplient, ma veille technologique se concentre sur les failles matérielles, la sécurisation des architectures et les nouvelles normes européennes.
+                    Les 3 articles ci-dessous sont mis à jour en temps réel grâce à un flux RSS branché sur les sources officielles.
                 </p>
             </div>
 
@@ -289,14 +289,13 @@
                     <i class="fa-solid fa-bolt text-amber-500"></i> Actualités IT (Flux en direct)
                 </h3>
                 <span class="text-xs font-bold bg-green-100 text-green-700 px-3 py-1 rounded-full animate-pulse border border-green-200">
-                    Sources : CERT-FR, ANSSI, IT-Connect
+                    Sources : CERT-FR, IT-Connect, ZDNet
                 </span>
             </div>
 
             <!-- CONTENEUR OÙ LE JAVASCRIPT VA INJECTER LES 3 ARTICLES -->
-            <div id="rss-container" class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
-                <!-- Message de chargement temporaire -->
-                <div class="col-span-3 text-center py-10 text-slate-400">
+            <div id="rss-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="col-span-1 md:col-span-3 text-center py-10 text-slate-400">
                     <i class="fa-solid fa-circle-notch fa-spin text-3xl mb-3"></i>
                     <p>Récupération des derniers articles en cours...</p>
                 </div>
@@ -305,7 +304,7 @@
             <div class="bg-slate-900 rounded-2xl shadow-xl p-8 md:p-12 text-white border-b-4 border-indigo-500">
                 <h3 class="text-2xl font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-lightbulb text-amber-400"></i> Impact sur ma pratique professionnelle</h3>
                 <p class="text-slate-300 leading-relaxed text-sm md:text-base">
-                    Cette veille technologique n'est pas que théorique, elle influence directement mon travail de technicien chez Exantis. La lecture régulière du CERT-FR et d'IT-Connect me pousse à <strong>systématiser la mise à jour des firmwares (Fortinet, HPE)</strong> chez nos clients. Je me sers également des actualités de l'ANSSI (comme la directive NIS 2) pour sensibiliser les entreprises à l'importance de <strong>segmenter leurs réseaux (VLANs)</strong>.
+                    Cette veille technologique n'est pas que théorique, elle influence directement mon travail de technicien chez Exantis. La lecture régulière du CERT-FR et d'IT-Connect me pousse à <strong>systématiser la mise à jour des firmwares (Fortinet, HPE)</strong> chez nos clients. Je me sers également de cette actualité pour sensibiliser les entreprises à l'importance de <strong>segmenter leurs réseaux (VLANs)</strong> face aux nouvelles menaces.
                 </p>
             </div>
         </section>
@@ -449,70 +448,70 @@
         async function chargerVeilleRSS() {
             const container = document.getElementById('rss-container');
             
-            // On vérifie si on n'a pas déjà chargé les articles pour ne pas refaire la requête
             if (container.dataset.loaded === "true") return;
             
-            container.innerHTML = ''; // On efface le logo de chargement
-            
-            // Les 3 sources RSS configurées
+            // 3 sources ultra-fiables avec images de secours au cas où le flux n'en a pas
             const feeds = [
-                { 
-                    url: 'https://www.cert.ssi.gouv.fr/alerte/feed/', 
-                    type: 'Alerte CERT-FR', 
-                    icon: 'fa-triangle-exclamation', 
-                    colorClass: 'text-red-600 bg-red-50 border-red-100' 
-                },
-                { 
-                    url: 'https://www.ssi.gouv.fr/feed/', 
-                    type: 'Actu ANSSI', 
-                    icon: 'fa-shield-halved', 
-                    colorClass: 'text-blue-600 bg-blue-50 border-blue-100' 
-                },
-                { 
-                    url: 'https://www.it-connect.fr/feed/', 
-                    type: 'Tech IT-Connect', 
-                    icon: 'fa-network-wired', 
-                    colorClass: 'text-emerald-600 bg-emerald-50 border-emerald-100' 
-                }
+                { url: 'https://www.cert.ssi.gouv.fr/feed/', type: 'CERT-FR', icon: 'fa-shield-virus', badge: 'bg-red-600', fallbackImg: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80' },
+                { url: 'https://www.it-connect.fr/feed/', type: 'IT-Connect', icon: 'fa-network-wired', badge: 'bg-blue-600', fallbackImg: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=600&q=80' },
+                { url: 'https://www.zdnet.fr/feeds/rss/actualites/securite/', type: 'ZDNet Cyber', icon: 'fa-lock', badge: 'bg-purple-600', fallbackImg: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80' }
             ];
 
+            let htmlContent = '';
+
             for (const feed of feeds) {
-                // API gratuite pour convertir le XML RSS en JSON lisible par le JS
-                const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
+                // Ajout d'un anti-cache pour forcer l'actualisation à chaque fois que tu vas sur la page
+                const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}&_cacheBuster=${new Date().getTime()}`;
 
                 try {
                     const response = await fetch(apiUrl);
                     const data = await response.json();
 
                     if (data.status === 'ok' && data.items.length > 0) {
-                        // On prend uniquement l'article le plus récent (index 0) de ce flux
                         const item = data.items[0]; 
-                        const date = new Date(item.pubDate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+                        const dateObj = new Date(item.pubDate);
+                        const date = dateObj.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+                        
+                        let cleanDesc = item.description.replace(/<[^>]*>?/gm, '').trim();
+                        if(cleanDesc.length > 150) cleanDesc = cleanDesc.substring(0, 150) + '...';
 
-                        const card = `
-                            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition-all group hover:-translate-y-1">
-                                <div class="p-6 flex-1 flex flex-col">
-                                    <div class="flex items-center justify-between mb-3">
-                                        <span class="text-[10px] font-bold ${feed.colorClass} px-2 py-1 rounded border uppercase tracking-wider">
-                                            <i class="fa-solid ${feed.icon}"></i> ${feed.type}
-                                        </span>
-                                        <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-clock"></i> ${date}</span>
+                        // Cherche une image dans le flux, sinon met la belle image de secours
+                        let imageUrl = feed.fallbackImg;
+                        if (item.thumbnail && item.thumbnail.trim() !== "") {
+                            imageUrl = item.thumbnail;
+                        } else if (item.enclosure && item.enclosure.link) {
+                            imageUrl = item.enclosure.link;
+                        }
+
+                        htmlContent += `
+                            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="h-40 relative overflow-hidden bg-slate-800">
+                                    <img src="${imageUrl}" alt="Illustration" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-90"></div>
+                                    <div class="absolute top-4 left-4 ${feed.badge} text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wider flex items-center gap-1">
+                                        <i class="fa-solid ${feed.icon}"></i> ${feed.type}
                                     </div>
-                                    <h4 class="font-bold text-sm text-slate-800 mb-4 group-hover:text-indigo-600 transition-colors line-clamp-3">${item.title}</h4>
-                                    <a href="${item.link}" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-slate-900 mt-auto transition-colors">
-                                        Lire l'article officiel <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <div class="absolute bottom-3 left-4 text-white text-xs font-medium flex items-center gap-1">
+                                        <i class="fa-regular fa-clock"></i> ${date}
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <h4 class="font-bold text-sm text-slate-800 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2 leading-snug">${item.title}</h4>
+                                    <p class="text-xs text-slate-600 mb-6 flex-1 line-clamp-3 leading-relaxed">${cleanDesc}</p>
+                                    <a href="${item.link}" target="_blank" class="mt-auto w-full bg-slate-50 hover:bg-blue-50 text-slate-700 hover:text-blue-700 font-bold py-2.5 rounded-xl transition-colors text-xs flex justify-center items-center gap-2 border border-slate-200 hover:border-blue-200">
+                                        Lire l'article <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     </a>
                                 </div>
                             </div>
                         `;
-                        container.innerHTML += card;
                     }
                 } catch (error) {
-                    console.error("Erreur avec le flux RSS :", feed.url);
+                    console.error("Erreur avec le flux :", feed.url);
                 }
             }
             
-            // Marquer comme chargé pour ne pas recharger à chaque clic sur l'onglet
+            // On remplace la roue de chargement par les vraies cartes
+            container.innerHTML = htmlContent || '<p class="col-span-3 text-center text-red-500 font-medium">Impossible de charger les flux pour le moment.</p>';
             container.dataset.loaded = "true";
         }
     </script>
