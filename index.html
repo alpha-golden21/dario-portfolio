@@ -64,7 +64,9 @@
 
     <main class="flex-1">
 
+        <!-- ========================================================= -->
         <!-- ACCUEIL -->
+        <!-- ========================================================= -->
         <section id="home" class="animate-fadeIn">
             <div class="relative overflow-hidden bg-slate-50 min-h-[calc(100vh-140px)] flex items-center py-20">
                 <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-blue-500 blur-3xl opacity-10"></div>
@@ -118,7 +120,9 @@
             </div>
         </section>
 
+        <!-- ========================================================= -->
         <!-- PRÉSENTATION -->
+        <!-- ========================================================= -->
         <section id="presentation" class="hidden animate-fadeIn max-w-6xl mx-auto px-4 py-16">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">À Propos de Mon Profil</h2>
@@ -138,17 +142,18 @@
                     <i class="fa-solid fa-terminal text-blue-500"></i> Mes Compétences Techniques
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-xl"><i class="fa-solid fa-network-wired text-blue-600"></i></div>
                         <h4 class="font-bold text-lg text-slate-800 mb-4">Réseau & Sécurité</h4>
                         <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">VLANs / Trunking</span>
-                            <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Aruba Instant On</span>
+                            <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Switching Aruba</span>
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Pare-feu Fortinet</span>
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">pfSense</span>
+                            <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">PoE+</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-4 text-xl"><i class="fa-solid fa-server text-indigo-600"></i></div>
                         <h4 class="font-bold text-lg text-slate-800 mb-4">Administration Système</h4>
                         <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
@@ -156,15 +161,17 @@
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Active Directory</span>
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">GPO</span>
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Linux</span>
+                            <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Hyper-V</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-4 text-xl"><i class="fa-solid fa-wrench text-emerald-600"></i></div>
                         <h4 class="font-bold text-lg text-slate-800 mb-4">Support & Outils</h4>
                         <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">GLPI (ITSM)</span>
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Ticketing N1/N2</span>
                             <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Hardware</span>
+                            <span class="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">Brassage</span>
                         </div>
                     </div>
                 </div>
@@ -178,7 +185,13 @@
                             <div class="absolute -left-[35px] bg-blue-500 w-4 h-4 rounded-full border-4 border-white"></div>
                             <span class="text-blue-600 font-bold text-sm">Exantis Informatique</span> <span class="text-slate-400 text-xs font-bold ml-2">2023 - Présent</span>
                             <h4 class="font-bold text-slate-800 mt-1 mb-2">Alternant Technicien Informatique</h4>
-                            <p class="text-sm text-slate-600">Maintenance de parcs (SCOP). Gestion de tickets N1/N2, déploiement serveurs, configuration switches/firewalls et assistance utilisateur.</p>
+                            <p class="text-sm text-slate-600">Maintenance de parcs informatiques (SCOP). Gestion de tickets N1/N2, déploiement de serveurs, configuration de switches/firewalls et assistance utilisateur.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[35px] bg-slate-300 w-4 h-4 rounded-full border-4 border-white"></div>
+                            <span class="text-slate-600 font-bold text-sm">Digith'all (St-Rémy)</span> <span class="text-slate-400 text-xs font-bold ml-2">Stages Bac Pro</span>
+                            <h4 class="font-bold text-slate-800 mt-1 mb-2">Stagiaire Technicien Support</h4>
+                            <p class="text-sm text-slate-600">Diagnostic et réparation hardware. Assistance de proximité pour les utilisateurs, masterisation de postes et configuration réseau basique.</p>
                         </div>
                     </div>
                 </div>
@@ -189,14 +202,22 @@
                             <div class="absolute -left-[35px] bg-emerald-500 w-4 h-4 rounded-full border-4 border-white"></div>
                             <span class="text-emerald-600 font-bold text-sm">CCI Vaucluse</span> <span class="text-slate-400 text-xs font-bold ml-2">2023 - 2025</span>
                             <h4 class="font-bold text-slate-800 mt-1 mb-2">BTS SIO (Option SISR)</h4>
-                            <p class="text-sm text-slate-600">Solutions d'Infrastructure, Systèmes et Réseaux. Réseaux, Windows/Linux Server et cybersécurité.</p>
+                            <p class="text-sm text-slate-600">Solutions d'Infrastructure, Systèmes et Réseaux. Apprentissage approfondi de l'administration réseau, Windows/Linux Server et cybersécurité.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[35px] bg-slate-300 w-4 h-4 rounded-full border-4 border-white"></div>
+                            <span class="text-slate-600 font-bold text-sm">Lycée La Salle (Avignon)</span> <span class="text-slate-400 text-xs font-bold ml-2">Obtenu en 2023</span>
+                            <h4 class="font-bold text-slate-800 mt-1 mb-2">Bac Pro SN (Option RISC)</h4>
+                            <p class="text-sm text-slate-600">Réseaux Informatiques et Systèmes Communicants. Bases de l'électronique, câblage, et configuration de switchs/routeurs.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ========================================================= -->
         <!-- PROJETS E4 -->
+        <!-- ========================================================= -->
         <section id="projets" class="hidden animate-fadeIn max-w-6xl mx-auto px-4 py-12 relative">
             <div id="projects-grid-view">
                 <div class="text-center mb-12">
@@ -205,7 +226,9 @@
                     <p class="text-slate-500">Épreuve E4 - BTS SIO Option SISR</p>
                 </div>
 
+                <!-- CARTE DES PROJETS MAJEURS -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                    <!-- PROJET 1 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 flex flex-col hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group" onclick="showProjectDetail(1)">
                         <div class="h-56 relative overflow-hidden bg-slate-800">
                             <img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="LAN" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700">
@@ -217,12 +240,19 @@
                         </div>
                         <div class="p-6 flex-1 flex flex-col">
                             <p class="text-sm text-slate-600 mb-4 flex-1">Remplacement de 6 anciens switches par une architecture sécurisée (VLANs) et manageable via le Cloud pour l'école Sancta Maria.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">HPE Instant On</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">VLAN</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">Trunking</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[10px] font-bold rounded border border-slate-200">+2</span>
+                            </div>
                             <button class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition-colors text-sm flex justify-center items-center gap-2">
                                 Lire l'étude de cas <i class="fa-solid fa-chevron-right"></i>
                             </button>
                         </div>
                     </div>
 
+                    <!-- PROJET 2 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 flex flex-col hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group" onclick="showProjectDetail(2)">
                         <div class="h-56 relative overflow-hidden bg-slate-800">
                             <img src="https://images.unsplash.com/photo-1562504208-03d85cc8c23e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="WIFI" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700">
@@ -234,6 +264,11 @@
                         </div>
                         <div class="p-6 flex-1 flex flex-col">
                             <p class="text-sm text-slate-600 mb-4 flex-1">Mise en place d'une couverture Wi-Fi complète avec isolation des flux via un pare-feu Fortinet pour le site Rouby.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">Aruba</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">Fortigate</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded border border-slate-200">VLAN</span>
+                            </div>
                             <button class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition-colors text-sm flex justify-center items-center gap-2">
                                 Lire l'étude de cas <i class="fa-solid fa-chevron-right"></i>
                             </button>
@@ -241,59 +276,248 @@
                     </div>
                 </div>
 
+                <!-- TABLEAU DES 12 RÉALISATIONS MINEURES -->
                 <div class="mt-16 pt-12 border-t border-slate-200">
                     <div class="text-center mb-10">
                         <h2 class="text-2xl font-bold text-slate-800 mb-2 flex justify-center items-center gap-2">
                             <i class="fa-solid fa-table-cells-large text-blue-500"></i> Autres Réalisations (Tableau de Synthèse)
                         </h2>
+                        <p class="text-sm text-slate-500">Missions complémentaires réalisées en formation et en entreprise.</p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="minor-projects-container"></div>
                 </div>
             </div>
 
-            <!-- VUE DÉTAILLÉE 1 -->
+            <!-- ========================================== -->
+            <!-- VUE DÉTAILLÉE : PROJET 1 (Sancta Maria) -->
+            <!-- ========================================== -->
             <div id="project-detail-1" class="hidden animate-fadeIn max-w-7xl mx-auto py-8">
-                <button onclick="hideProjectDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 font-medium transition-colors"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
-                    <h1 class="text-3xl font-extrabold text-slate-900 mb-6">Refonte d'Infrastructure LAN</h1>
-                    <p class="text-slate-600 leading-relaxed mb-5">L'intervention s'est déroulée pour l'école Sancta Maria. C'est un nouveau client pour Exantis. Le réseau existant reposait sur des équipements grand public non-manageables, entraînant de graves failles de sécurité.</p>
-                    <p class="text-slate-600 mb-5">Remplacement complet par des switches HPE Instant On avec segmentation via VLAN (Admin, Pédago, Gestion).</p>
+                <button onclick="hideProjectDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 font-medium transition-colors">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+                </button>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- SIDEBAR GAUCHE -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="LAN" class="w-full h-64 object-cover" />
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-slate-800 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider">Fiche Technique</div>
+                            <div class="divide-y divide-slate-100 text-sm">
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Client</span><span class="text-slate-800 font-medium">Établissement Scolaire</span></div>
+                                <div class="p-4 flex justify-between"><span class="font-bold text-slate-600">Rôle</span><span class="text-slate-800 font-medium">Technicien SISR</span></div>
+                                <div class="p-4">
+                                    <span class="font-bold text-slate-600 block mb-3">Technologies</span>
+                                    <div class="flex flex-wrap gap-2 text-xs font-bold text-blue-700">
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">HPE Instant On</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">VLAN</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">Trunking</span>
+                                        <span class="bg-blue-50 px-2 py-1.5 rounded border border-blue-100">PoE+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-emerald-600 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-award"></i> Compétences Validées
+                            </div>
+                            <div class="p-4 space-y-3 text-xs font-medium text-slate-700 leading-tight">
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> A1.1.1 : Analyse du cahier des charges</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> A1.1.3 : Conception de l'architecture</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> A3.2.1 : Installation et config éléments actifs</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> A1.2.4 : Détermination des tests nécessaires</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTENU PRINCIPAL (8 ÉTAPES) -->
+                    <div class="lg:col-span-8 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+                        <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Cas d'étude E4</div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Refonte d'Infrastructure LAN : Segmentation & Sécurisation</h1>
+                        
+                        <p class="text-lg text-slate-600 mb-12 leading-relaxed border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium">
+                            Projet majeur de l'épreuve E4 : La refonte complète vers un environnement réseau HPE Instant On est une transition stratégique visant à moderniser, sécuriser et simplifier la gestion de l'infrastructure de l'école Sancta Maria.
+                        </p>
+
+                        <div class="space-y-12">
+                            <!-- Section 1 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
+                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">1</span> Présentation de l'entreprise & Contexte
+                                </h2>
+                                <p class="text-slate-600 leading-relaxed text-justify mb-6">Mon alternance se déroule chez Exantis Informatique, une SCOP basée à Avignon. L'intervention s'est déroulée pour l'école Sancta Maria. C'est un nouveau client pour Exantis, qui a souhaité changer de prestataire suite à une gestion chaotique de leur ancien informaticien. Le réseau existant reposait sur des équipements grand public non-manageables (D-Link), entraînant de graves failles de sécurité et des ralentissements.</p>
+                                
+                                <!-- Espace Image Type -->
+                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
+                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
+                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span>
+                                    <p class="text-xs text-slate-500 italic">Insérer ici la capture "Exantis informatique" (Map) et "Contexte".</p>
+                                </div>
+                            </div>
+
+                            <!-- Section 2 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
+                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">2</span> Cahier des Charges & Problématique
+                                </h2>
+                                <p class="text-slate-600 leading-relaxed text-justify">Le problème principal résidait dans l'architecture "à plat". L'administration, la pédagogie et le Wi-Fi cohabitaient sur le même plan d'adressage IP. Un élève pouvait techniquement accéder aux dossiers partagés de l'administration. Pour cette refonte, le client a défini des attentes strictes :</p>
+                                <ul class="mt-5 space-y-3 pl-4 mb-6">
+                                    <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">Fiabilité maximale : Assurer la continuité des cours et du secrétariat.</span></li>
+                                    <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">Gestion centralisée : Permettre à Exantis de superviser le réseau à distance.</span></li>
+                                    <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">Sécurité : Isoler hermétiquement les données de la direction.</span></li>
+                                    <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">Évolutivité : Intégrer des ports PoE pour futures caméras/bornes.</span></li>
+                                </ul>
+                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
+                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
+                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span><p class="text-xs text-slate-500 italic">Insérer ici la capture : Attente (Les 6 blocs colorés).</p>
+                                </div>
+                            </div>
+
+                            <!-- Section 3 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">3</span> Étude des Solutions & Choix Technique</h2>
+                                <p class="text-slate-600 leading-relaxed text-justify mb-6">Pour répondre au besoin, j'ai étudié 3 solutions : les switches non-manageables (rejetés car non évolutifs et impossibles à gérer à distance), les switches manageables classiques CLI (rejetés car trop complexes et coûteux à maintenir), et enfin la solution retenue : les switches semi-manageables "Cloud". J'ai opté pour la gamme HPE Networking Instant On 1930 qui offre le meilleur rapport qualité/prix, une gestion via portail web et le support des VLANs.</p>
+                            </div>
+
+                            <!-- Section 4 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">4</span> Conception : Architecture et Topologie</h2>
+                                <p class="text-slate-600 leading-relaxed text-justify">L'établissement étant composé de plusieurs bâtiments, une topologie en étoile étendue a été déployée depuis le cœur de réseau. J'ai créé un plan d'adressage segmenté en 3 VLANs distincts :</p>
+                                <ul class="mt-5 space-y-3 pl-4 mb-6">
+                                    <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">VLAN 1 (Gestion) : Réservé aux informaticiens Exantis.</span></li>
+                                    <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">VLAN 2 (LAN-Admin) : Direction et comptabilité.</span></li>
+                                    <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">VLAN 3 (LAN-Pedago) : Élèves et enseignants avec filtrage.</span></li>
+                                </ul>
+                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
+                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
+                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span><p class="text-xs text-slate-500 italic">Insérer ici : Schéma Topologie et Création VLAN.</p>
+                                </div>
+                            </div>
+
+                            <!-- Section 5 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">5</span> Démarche de Réalisation et Déploiement</h2>
+                                <p class="text-slate-600 leading-relaxed text-justify mb-6">Pré-configuration des 6 switches en laboratoire sur le portail Cloud Instant On. Planification hors temps scolaire. Montage physique, rackage et brassage propre. Pour répondre à la contrainte énergétique, j'ai configuré l'alimentation PoE pour qu'elle se coupe automatiquement la nuit sur les équipements pédagogiques.</p>
+                            </div>
+
+                            <!-- Section 6 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">6</span> Résultats et Supervision</h2>
+                                <p class="text-slate-600 leading-relaxed text-justify mb-6">Le réseau est opérationnel. Grâce au portail HPE, Exantis dispose d'une carte dynamique indiquant l'état de santé de chaque switch. Si un appareil est déconnecté, le système génère des alertes automatiques indiquant les causes probables.</p>
+                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
+                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
+                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span><p class="text-xs text-slate-500 italic">Insérer ici : Topologie (Interface verte) et Alertes auto.</p>
+                                </div>
+                            </div>
+
+                            <!-- Section 7 & 8 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">7</span> Difficultés & Conclusion</h2>
+                                <p class="text-slate-600 leading-relaxed text-justify mb-4">La principale difficulté a été l'absence de plan de brassage. J'ai dû réaliser un audit physique complet avec un testeur de câble pour affecter correctement les ports sur les VLANs.</p>
+                                <p class="text-slate-600 leading-relaxed text-justify">En conclusion, le cahier des charges est rempli. Le réseau est fiable et sécurisé. Ce projet m'a permis de mettre en pratique la théorie réseau (Trunking, 802.1Q) sur du matériel de production d'entreprise.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- VUE DÉTAILLÉE 2 -->
+            <!-- ========================================== -->
+            <!-- VUE DÉTAILLÉE : PROJET 2 (Wi-Fi) -->
+            <!-- ========================================== -->
             <div id="project-detail-2" class="hidden animate-fadeIn max-w-7xl mx-auto py-8">
                 <button onclick="hideProjectDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 font-medium transition-colors"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
-                    <h1 class="text-3xl font-extrabold text-slate-900 mb-6">Déploiement Wi-Fi Sécurisé</h1>
-                    <p class="text-slate-600 leading-relaxed mb-5">Déploiement d'une infrastructure filaire et Wi-Fi pour l'entreprise Rouby. Isolation du réseau Invité du réseau Collaborateur via un pare-feu Fortigate et des AP Aruba.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-4 space-y-6">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                            <img src="https://images.unsplash.com/photo-1562504208-03d85cc8c23e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="WIFI" class="w-full h-64 object-cover" />
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-emerald-600 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-award"></i> Compétences Validées
+                            </div>
+                            <div class="p-4 space-y-3 text-xs font-medium text-slate-700">
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> A3.1.1 : Proposition solution d'infra</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> A3.2.1 : Installation d'éléments</div>
+                                <div class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i> B3.1 : Protéger l'identité</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-8 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+                        <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Cas d'étude E4</div>
+                        <h1 class="text-3xl font-extrabold text-slate-900 mb-6">Déploiement Wi-Fi Sécurisé</h1>
+                        <p class="text-slate-600 leading-relaxed mb-6">Déploiement d'une infrastructure filaire et Wi-Fi pour l'entreprise Rouby. L'objectif était de fournir une couverture radio optimale et d'isoler hermétiquement le réseau 'Invité' du réseau 'Interne'.</p>
+                        
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 border-b-2 border-slate-100 pb-2">Configuration et Déploiement</h3>
+                        <p class="text-slate-600 mb-4">La sécurité a été centralisée sur un pare-feu Fortigate. J'y ai configuré les interfaces VLAN, le serveur DHCP, et les règles bloquant l'accès du VLAN Guest vers le réseau local.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-slate-600 text-sm"><i class="fa-solid fa-check text-blue-500"></i> VLAN 30 (Interne) : WPA-Enterprise / Accès total.</li>
+                            <li class="flex items-center gap-2 text-slate-600 text-sm"><i class="fa-solid fa-check text-blue-500"></i> VLAN 40 (Guest) : Portail Captif / Accès Internet uniquement.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- VEILLE TECHNOLOGIQUE (100% AUTOMATISÉE ET ILLUSTRÉE) -->
+        <!-- ========================================================= -->
+        <!-- VEILLE TECHNOLOGIQUE -->
+        <!-- ========================================================= -->
         <section id="veille" class="hidden animate-fadeIn max-w-6xl mx-auto px-4 py-16">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
                 <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-600 font-bold px-4 py-2 rounded-full mb-6 border border-indigo-100">
                     <i class="fa-solid fa-rss"></i> Épreuve E4 - Veille Informatique
                 </div>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">L'évolution de la <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Cybersécurité</span> dans les réseaux</h2>
                 <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                    Les 3 articles ci-dessous sont mis à jour en temps réel grâce à un flux RSS branché sur les sources officielles.
+                    Dans un contexte où les attaques se multiplient, ma veille technologique se concentre sur la sécurisation des architectures et les nouvelles normes de protection.
                 </p>
             </div>
 
-            <!-- En-tête de la section Flux RSS -->
+            <!-- TABLEAU METHODOLOGIE DE VEILLE -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 mb-16">
+                <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                    <i class="fa-solid fa-magnifying-glass-chart text-blue-500"></i> Méthodologie & Outils de Veille
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800 mb-2">1. Ciblage & Thème</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Je me concentre sur les <strong>vulnérabilités réseaux</strong> (LAN/WLAN), les failles matérielles (Fortinet, Cisco) et les normes européennes (NIS 2).</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800 mb-2">2. Outils de Collecte</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">J'utilise des agrégateurs de <strong>flux RSS (Feedly, Inoreader)</strong> et des alertes par mots-clés Google pour centraliser l'information automatiquement.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800 mb-2">3. Traitement & Sources</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Tri hebdomadaire des alertes officielles (<strong>CERT-FR, ANSSI</strong>), des blogs spécialisés (<strong>IT-Connect</strong>) et des forums (Reddit r/sysadmin).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- En-tête Flux RSS -->
             <div class="flex flex-col md:flex-row items-center justify-between border-b border-slate-200 pb-4 mb-8 gap-4">
                 <h3 class="text-2xl font-bold text-slate-800 flex items-center gap-3">
                     <i class="fa-solid fa-bolt text-amber-500"></i> Actualités IT (Flux en direct)
                 </h3>
                 <span class="text-xs font-bold bg-green-100 text-green-700 px-3 py-1 rounded-full animate-pulse border border-green-200">
-                    Sources : CERT-FR, IT-Connect, ZDNet
+                    Sources : CERT-FR, IT-Connect, Le Monde Informatique
                 </span>
             </div>
 
-            <!-- CONTENEUR OÙ LE JAVASCRIPT VA INJECTER LES 3 ARTICLES -->
+            <!-- CONTENEUR INJECTION JS -->
             <div id="rss-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <div class="col-span-1 md:col-span-3 text-center py-10 text-slate-400">
                     <i class="fa-solid fa-circle-notch fa-spin text-3xl mb-3"></i>
@@ -309,13 +533,18 @@
             </div>
         </section>
 
+        <!-- ========================================================= -->
         <!-- CONTACT -->
+        <!-- ========================================================= -->
         <section id="contact" class="hidden animate-fadeIn max-w-xl mx-auto px-4 py-24">
             <div class="bg-white shadow-xl rounded-2xl p-8 border-t-4 border-blue-500 text-center">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-8">Me Contacter</h2>
                 <div class="space-y-4 mb-8">
                     <a href="mailto:contact@dario-demange.fr" class="flex items-center justify-center gap-3 p-4 bg-slate-50 rounded-xl hover:bg-blue-50 hover:text-blue-700 transition-colors font-medium text-slate-700 border border-slate-100">
                         <i class="fa-solid fa-envelope text-blue-500"></i> contact@dario-demange.fr
+                    </a>
+                    <a href="https://linkedin.com/in/dario-demange" target="_blank" class="flex items-center justify-center gap-3 p-4 bg-slate-50 rounded-xl hover:bg-blue-50 hover:text-blue-700 transition-colors font-medium text-slate-700 border border-slate-100">
+                        <i class="fa-brands fa-linkedin text-blue-500"></i> Mon profil LinkedIn
                     </a>
                 </div>
             </div>
@@ -377,7 +606,6 @@
             document.getElementById('mobile-menu').classList.add('hidden');
             if(tabId === 'projets') hideProjectDetail();
 
-            // Charger les flux RSS quand on clique sur "Veille"
             if(tabId === 'veille') {
                 chargerVeilleRSS();
             }
@@ -406,12 +634,20 @@
             document.getElementById('modal').classList.add('hidden');
         }
 
-        // --- 4. DATA ET MODAL DES PETITS PROJETS ---
+        // --- 4. DATA ET MODAL DES 12 PETITS PROJETS ---
         const minorProjects = [
-            { id: 101, title: "Serveur GLPI (Linux)", cat: "Formation", icon: "fa-solid fa-server text-purple-500", desc: "Déploiement GLPI sous Linux. Intégration Active Directory (SSO).", skills: ["Linux", "GLPI", "AD"] },
-            { id: 102, title: "Serveur AD & Clients", cat: "Formation", icon: "fa-solid fa-users text-blue-500", desc: "Contrôleur de domaine AD. Intégration clients, GPO, droits.", skills: ["Windows Server", "GPO"] },
-            { id: 103, title: "Pare-feu pfSense", cat: "Formation", icon: "fa-solid fa-shield-halved text-red-500", desc: "Création d'interfaces VLAN et règles de filtrage.", skills: ["pfSense", "Routage"] },
-            { id: 105, title: "Ticketing N1/N2", cat: "Exantis", icon: "fa-solid fa-wrench text-amber-500", desc: "Gestion des incidents, prise en main à distance.", skills: ["Support", "Diagnostic"] }
+            { id: 101, title: "Mise en place serveur GLPI (Linux)", cat: "Formation", icon: "fa-solid fa-server text-purple-500", desc: "Déploiement d'une solution GLPI sous environnement Linux. Intégration avec l'Active Directory pour l'authentification unifiée (SSO) des utilisateurs et la gestion du parc informatique.", skills: ["Linux", "GLPI", "Active Directory", "ITSM"] },
+            { id: 102, title: "Serveur AD & Clients", cat: "Formation", icon: "fa-solid fa-users text-blue-500", desc: "Installation et configuration d'un contrôleur de domaine Active Directory. Intégration de postes clients sous Windows et Linux, gestion des GPO et des droits utilisateurs.", skills: ["Windows Server", "Active Directory", "GPO", "Linux"] },
+            { id: 103, title: "Pare-feu pfSense & VLANs", cat: "Formation", icon: "fa-solid fa-shield-halved text-red-500", desc: "Mise en place d'un pare-feu pfSense. Création d'interfaces virtuelles pour segmenter le réseau (VLAN) et élaboration de règles strictes de filtrage (Firewalling).", skills: ["pfSense", "Sécurité", "VLAN", "Routage"] },
+            { id: 104, title: "MOOC ANSSI & Certif Cisco", cat: "Formation", icon: "fa-solid fa-certificate text-emerald-500", desc: "Validation des acquis en cybersécurité via l'obtention de l'attestation du MOOC de l'ANSSI. Suivi et certification sur les fondamentaux réseaux Cisco.", skills: ["Cybersécurité", "ANSSI", "Réseau Cisco"] },
+            { id: 105, title: "Ticketing & Support N1/N2", cat: "Exantis", icon: "fa-solid fa-wrench text-amber-500", desc: "Gestion quotidienne des incidents matériels et logiciels. Diagnostic, prise en main à distance, et résolution technique pour divers clients au sein d'une SCOP.", skills: ["Support", "Diagnostic", "Relation Client"] },
+            { id: 106, title: "Gestion O365 & AD", cat: "Exantis", icon: "fa-solid fa-cloud text-blue-400", desc: "Administration courante des locataires (Tenants) Office 365 et des serveurs AD sur site : création d'utilisateurs, gestion des licences, réinitialisation de mots de passe, groupes de sécurité.", skills: ["Office 365", "Active Directory", "Azure AD"] },
+            { id: 107, title: "Reconditionnement & Hardware", cat: "Exantis", icon: "fa-solid fa-hard-drive text-slate-500", desc: "Opérations de maintenance matérielle : ajout de RAM, remplacement de disques par des SSD, masterisation et remise en état de postes de travail et de serveurs pour allonger leur durée de vie.", skills: ["Hardware", "Masterisation", "Maintenance"] },
+            { id: 108, title: "Déploiement d'outils", cat: "Exantis", icon: "fa-solid fa-gear text-indigo-500", desc: "Participation à la mise en place d'un nouvel outil de prise en main à distance et de gestion d'incidents, facilitant l'intervention rapide des techniciens.", skills: ["RMM", "Support à distance", "Projet interne"] },
+            { id: 109, title: "Configuration Serveur HPE", cat: "Exantis", icon: "fa-solid fa-server text-green-600", desc: "Mise en service matérielle et logicielle d'un serveur physique HPE (Hewlett Packard Enterprise). Configuration de la grappe RAID et installation de l'hyperviseur.", skills: ["Serveur HPE", "RAID", "Hardware Entreprise"] },
+            { id: 110, title: "Migration TSE vers O365", cat: "Exantis", icon: "fa-solid fa-cloud text-sky-500", desc: "Accompagnement d'un client dans l'évolution de son infrastructure : passage d'un environnement historique TSE (Terminal Server) vers les solutions modernes collaboratives Microsoft 365.", skills: ["Migration Cloud", "Office 365", "TSE/RDS"] },
+            { id: 111, title: "Régie dans les écoles", cat: "Exantis", icon: "fa-solid fa-briefcase text-orange-500", desc: "Interventions sur site régulières (Trinitaire, Marie Pilla, Les Chênes, Sancta Maria). Résolution de problèmes de proximité, renouvellement de postes et brassage réseau.", skills: ["Intervention sur site", "Autonomie", "Support Proximité"] },
+            { id: 112, title: "Migration de poste", cat: "Exantis", icon: "fa-solid fa-microchip text-teal-600", desc: "Migration complète de postes de travail pour un cabinet avec des contraintes logicielles métiers spécifiques. Sauvegarde, transfert de profil et tests applicatifs.", skills: ["Déploiement", "Logiciels Métiers", "Migration Data"] }
         ];
 
         const container = document.getElementById('minor-projects-container');
@@ -421,11 +657,11 @@
             div.innerHTML = `
                 <div onclick="openModal(${dataStr})" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group">
                     <div class="flex justify-between items-start mb-3">
-                        <div class="p-2 bg-slate-50 rounded-lg group-hover:bg-blue-50"><i class="${p.icon}"></i></div>
-                        <span class="text-[9px] font-bold uppercase bg-slate-100 text-slate-500 px-2 py-1 rounded-full">${p.cat}</span>
+                        <div class="p-2 bg-slate-50 rounded-lg group-hover:bg-blue-50 transition-colors"><i class="${p.icon}"></i></div>
+                        <span class="text-[9px] font-bold uppercase tracking-wider bg-slate-100 text-slate-500 px-2 py-1 rounded-full">${p.cat}</span>
                     </div>
-                    <h4 class="font-bold text-slate-800 text-sm mb-2 group-hover:text-blue-600">${p.title}</h4>
-                    <p class="text-xs text-slate-500 line-clamp-2">Cliquez pour voir les détails.</p>
+                    <h4 class="font-bold text-slate-800 text-sm mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">${p.title}</h4>
+                    <p class="text-xs text-slate-500 line-clamp-2">Cliquez pour voir les détails de l'intervention.</p>
                 </div>
             `;
             container.appendChild(div);
@@ -450,17 +686,15 @@
             
             if (container.dataset.loaded === "true") return;
             
-            // 3 sources ultra-fiables avec images de secours au cas où le flux n'en a pas
             const feeds = [
                 { url: 'https://www.cert.ssi.gouv.fr/feed/', type: 'CERT-FR', icon: 'fa-shield-virus', badge: 'bg-red-600', fallbackImg: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80' },
                 { url: 'https://www.it-connect.fr/feed/', type: 'IT-Connect', icon: 'fa-network-wired', badge: 'bg-blue-600', fallbackImg: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=600&q=80' },
-                { url: 'https://www.zdnet.fr/feeds/rss/actualites/securite/', type: 'ZDNet Cyber', icon: 'fa-lock', badge: 'bg-purple-600', fallbackImg: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80' }
+                { url: 'https://www.lemondeinformatique.fr/flux-rss/thematique/securite/rss.xml', type: 'Cyber Actu', icon: 'fa-lock', badge: 'bg-purple-600', fallbackImg: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80' }
             ];
 
             let htmlContent = '';
 
             for (const feed of feeds) {
-                // Ajout d'un anti-cache pour forcer l'actualisation à chaque fois que tu vas sur la page
                 const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}&_cacheBuster=${new Date().getTime()}`;
 
                 try {
@@ -475,7 +709,6 @@
                         let cleanDesc = item.description.replace(/<[^>]*>?/gm, '').trim();
                         if(cleanDesc.length > 150) cleanDesc = cleanDesc.substring(0, 150) + '...';
 
-                        // Cherche une image dans le flux, sinon met la belle image de secours
                         let imageUrl = feed.fallbackImg;
                         if (item.thumbnail && item.thumbnail.trim() !== "") {
                             imageUrl = item.thumbnail;
@@ -486,7 +719,7 @@
                         htmlContent += `
                             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                                 <div class="h-40 relative overflow-hidden bg-slate-800">
-                                    <img src="${imageUrl}" alt="Illustration" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
+                                    <img src="${imageUrl}" onerror="this.onerror=null;this.src='${feed.fallbackImg}';" alt="Illustration" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
                                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-90"></div>
                                     <div class="absolute top-4 left-4 ${feed.badge} text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wider flex items-center gap-1">
                                         <i class="fa-solid ${feed.icon}"></i> ${feed.type}
@@ -510,7 +743,6 @@
                 }
             }
             
-            // On remplace la roue de chargement par les vraies cartes
             container.innerHTML = htmlContent || '<p class="col-span-3 text-center text-red-500 font-medium">Impossible de charger les flux pour le moment.</p>';
             container.dataset.loaded = "true";
         }
