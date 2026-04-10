@@ -231,7 +231,7 @@
                     <!-- PROJET 1 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 flex flex-col hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group" onclick="showProjectDetail(1)">
                         <div class="h-56 relative overflow-hidden bg-slate-800">
-                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="LAN" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700">
+                            <img src="montage.png" alt="LAN" onerror="this.src='https://images.unsplash.com/photo-1544197150-b99a580bbcbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4 text-white">
                                 <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">Projet Majeur</span>
@@ -284,6 +284,13 @@
                         </h2>
                         <p class="text-sm text-slate-500">Missions complémentaires réalisées en formation et en entreprise.</p>
                     </div>
+                    <div class="flex justify-center mb-8 w-full max-w-lg mx-auto">
+                        <div class="bg-slate-100 p-1.5 rounded-xl w-full flex gap-1 border border-slate-200">
+                            <button onclick="filterMinorProjects('all')" id="btn-filter-all" class="flex-1 px-4 py-2.5 rounded-lg text-sm font-bold bg-white text-blue-600 shadow-sm transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-layer-group"></i> Tous</button>
+                            <button onclick="filterMinorProjects('Exantis')" id="btn-filter-pro" class="flex-1 px-4 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-slate-700 transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-briefcase"></i> Entreprise</button>
+                            <button onclick="filterMinorProjects('Formation')" id="btn-filter-ecole" class="flex-1 px-4 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-slate-700 transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-graduation-cap"></i> Formation</button>
+                        </div>
+                    </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="minor-projects-container"></div>
                 </div>
             </div>
@@ -300,7 +307,7 @@
                     <!-- SIDEBAR GAUCHE -->
                     <div class="lg:col-span-4 space-y-6">
                         <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="LAN" class="w-full h-64 object-cover" />
+                            <img src="montage.png" alt="LAN" onerror="this.src='https://images.unsplash.com/photo-1544197150-b99a580bbcbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'" class="w-full h-64 object-cover" />
                         </div>
 
                         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
@@ -350,11 +357,10 @@
                                 </h2>
                                 <p class="text-slate-600 leading-relaxed text-justify mb-6">Mon alternance se déroule chez Exantis Informatique, une SCOP basée à Avignon. L'intervention s'est déroulée pour l'école Sancta Maria. C'est un nouveau client pour Exantis, qui a souhaité changer de prestataire suite à une gestion chaotique de leur ancien informaticien. Le réseau existant reposait sur des équipements grand public non-manageables (D-Link), entraînant de graves failles de sécurité et des ralentissements.</p>
                                 
-                                <!-- Espace Image Type -->
-                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
-                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
-                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span>
-                                    <p class="text-xs text-slate-500 italic">Insérer ici la capture "Exantis informatique" (Map) et "Contexte".</p>
+                                <!-- Image 1 : Exantis -->
+                                <div class="mt-6 bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                    <img src="Photos d'Exantis entreprise.png" alt="Bureaux d'Exantis Informatique" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-camera mr-1"></i> Locaux d'Exantis Informatique</p>
                                 </div>
                             </div>
 
@@ -370,10 +376,6 @@
                                     <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">Sécurité : Isoler hermétiquement les données de la direction.</span></li>
                                     <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">Évolutivité : Intégrer des ports PoE pour futures caméras/bornes.</span></li>
                                 </ul>
-                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
-                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
-                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span><p class="text-xs text-slate-500 italic">Insérer ici la capture : Attente (Les 6 blocs colorés).</p>
-                                </div>
                             </div>
 
                             <!-- Section 3 -->
@@ -391,9 +393,21 @@
                                     <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">VLAN 2 (LAN-Admin) : Direction et comptabilité.</span></li>
                                     <li class="flex items-start gap-3 text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100"><div class="mt-1 w-2 h-2 rounded-full bg-blue-500 shrink-0"></div><span class="text-sm font-medium">VLAN 3 (LAN-Pedago) : Élèves et enseignants avec filtrage.</span></li>
                                 </ul>
-                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
-                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
-                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span><p class="text-xs text-slate-500 italic">Insérer ici : Schéma Topologie et Création VLAN.</p>
+
+                                <!-- Images Section 4 : Topologie, IPs, VLANs -->
+                                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm md:col-span-2">
+                                        <img src="Shema Reseaux Sancta marie.png" alt="Schéma Logique" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-sitemap mr-1"></i> Schéma Réseau de l'école Sancta Maria</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="adresses ip.png" alt="Plan d'adressage IP" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-list-ol mr-1"></i> Plan d'adressage IP segmenté</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                        <img src="vlan.png" alt="Configuration VLAN" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-network-wired mr-1"></i> Table et configuration des VLANs</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -401,15 +415,23 @@
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">5</span> Démarche de Réalisation et Déploiement</h2>
                                 <p class="text-slate-600 leading-relaxed text-justify mb-6">Pré-configuration des 6 switches en laboratoire sur le portail Cloud Instant On. Planification hors temps scolaire. Montage physique, rackage et brassage propre. Pour répondre à la contrainte énergétique, j'ai configuré l'alimentation PoE pour qu'elle se coupe automatiquement la nuit sur les équipements pédagogiques.</p>
+                                
+                                <!-- Image 5 : Montage -->
+                                <div class="mt-6 bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                    <img src="montage.png" alt="Montage physique en baie" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-screwdriver-wrench mr-1"></i> Montage physique, rackage et brassage</p>
+                                </div>
                             </div>
 
                             <!-- Section 6 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm">6</span> Résultats et Supervision</h2>
                                 <p class="text-slate-600 leading-relaxed text-justify mb-6">Le réseau est opérationnel. Grâce au portail HPE, Exantis dispose d'une carte dynamique indiquant l'état de santé de chaque switch. Si un appareil est déconnecté, le système génère des alertes automatiques indiquant les causes probables.</p>
-                                <div class="border-2 border-dashed border-slate-300 bg-slate-50 rounded-xl p-8 flex flex-col items-center justify-center text-center group">
-                                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-3"><i class="fa-regular fa-image text-slate-400"></i></div>
-                                    <span class="text-sm font-bold text-slate-600 mb-1">Espace Image</span><p class="text-xs text-slate-500 italic">Insérer ici : Topologie (Interface verte) et Alertes auto.</p>
+                                
+                                <!-- Image 6 : Topologie/Supervision -->
+                                <div class="mt-6 bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                    <img src="Topologie reseaux.png" alt="Interface de supervision" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-desktop mr-1"></i> Interface de supervision Cloud HPE Instant On</p>
                                 </div>
                             </div>
 
@@ -634,51 +656,59 @@
             document.getElementById('modal').classList.add('hidden');
         }
 
-        // --- 4. DATA ET MODAL DES 12 PETITS PROJETS ---
-        const minorProjects = [
-            { id: 101, title: "Mise en place serveur GLPI (Linux)", cat: "Formation", icon: "fa-solid fa-server text-purple-500", desc: "Déploiement d'une solution GLPI sous environnement Linux. Intégration avec l'Active Directory pour l'authentification unifiée (SSO) des utilisateurs et la gestion du parc informatique.", skills: ["Linux", "GLPI", "Active Directory", "ITSM"] },
-            { id: 102, title: "Serveur AD & Clients", cat: "Formation", icon: "fa-solid fa-users text-blue-500", desc: "Installation et configuration d'un contrôleur de domaine Active Directory. Intégration de postes clients sous Windows et Linux, gestion des GPO et des droits utilisateurs.", skills: ["Windows Server", "Active Directory", "GPO", "Linux"] },
-            { id: 103, title: "Pare-feu pfSense & VLANs", cat: "Formation", icon: "fa-solid fa-shield-halved text-red-500", desc: "Mise en place d'un pare-feu pfSense. Création d'interfaces virtuelles pour segmenter le réseau (VLAN) et élaboration de règles strictes de filtrage (Firewalling).", skills: ["pfSense", "Sécurité", "VLAN", "Routage"] },
-            { id: 104, title: "MOOC ANSSI & Certif Cisco", cat: "Formation", icon: "fa-solid fa-certificate text-emerald-500", desc: "Validation des acquis en cybersécurité via l'obtention de l'attestation du MOOC de l'ANSSI. Suivi et certification sur les fondamentaux réseaux Cisco.", skills: ["Cybersécurité", "ANSSI", "Réseau Cisco"] },
-            { id: 105, title: "Ticketing & Support N1/N2", cat: "Exantis", icon: "fa-solid fa-wrench text-amber-500", desc: "Gestion quotidienne des incidents matériels et logiciels. Diagnostic, prise en main à distance, et résolution technique pour divers clients au sein d'une SCOP.", skills: ["Support", "Diagnostic", "Relation Client"] },
-            { id: 106, title: "Gestion O365 & AD", cat: "Exantis", icon: "fa-solid fa-cloud text-blue-400", desc: "Administration courante des locataires (Tenants) Office 365 et des serveurs AD sur site : création d'utilisateurs, gestion des licences, réinitialisation de mots de passe, groupes de sécurité.", skills: ["Office 365", "Active Directory", "Azure AD"] },
-            { id: 107, title: "Reconditionnement & Hardware", cat: "Exantis", icon: "fa-solid fa-hard-drive text-slate-500", desc: "Opérations de maintenance matérielle : ajout de RAM, remplacement de disques par des SSD, masterisation et remise en état de postes de travail et de serveurs pour allonger leur durée de vie.", skills: ["Hardware", "Masterisation", "Maintenance"] },
-            { id: 108, title: "Déploiement d'outils", cat: "Exantis", icon: "fa-solid fa-gear text-indigo-500", desc: "Participation à la mise en place d'un nouvel outil de prise en main à distance et de gestion d'incidents, facilitant l'intervention rapide des techniciens.", skills: ["RMM", "Support à distance", "Projet interne"] },
-            { id: 109, title: "Configuration Serveur HPE", cat: "Exantis", icon: "fa-solid fa-server text-green-600", desc: "Mise en service matérielle et logicielle d'un serveur physique HPE (Hewlett Packard Enterprise). Configuration de la grappe RAID et installation de l'hyperviseur.", skills: ["Serveur HPE", "RAID", "Hardware Entreprise"] },
-            { id: 110, title: "Migration TSE vers O365", cat: "Exantis", icon: "fa-solid fa-cloud text-sky-500", desc: "Accompagnement d'un client dans l'évolution de son infrastructure : passage d'un environnement historique TSE (Terminal Server) vers les solutions modernes collaboratives Microsoft 365.", skills: ["Migration Cloud", "Office 365", "TSE/RDS"] },
-            { id: 111, title: "Régie dans les écoles", cat: "Exantis", icon: "fa-solid fa-briefcase text-orange-500", desc: "Interventions sur site régulières (Trinitaire, Marie Pilla, Les Chênes, Sancta Maria). Résolution de problèmes de proximité, renouvellement de postes et brassage réseau.", skills: ["Intervention sur site", "Autonomie", "Support Proximité"] },
-            { id: 112, title: "Migration de poste", cat: "Exantis", icon: "fa-solid fa-microchip text-teal-600", desc: "Migration complète de postes de travail pour un cabinet avec des contraintes logicielles métiers spécifiques. Sauvegarde, transfert de profil et tests applicatifs.", skills: ["Déploiement", "Logiciels Métiers", "Migration Data"] }
-        ];
+        function filterMinorProjects(filter) {
+            const minorProjects = [
+                { id: 101, title: "Mise en place serveur GLPI (Linux)", cat: "Formation", type: "Formation", icon: "fa-solid fa-server text-purple-500", desc: "Déploiement d'une solution GLPI sous environnement Linux. Intégration avec l'Active Directory pour l'authentification unifiée (SSO) des utilisateurs et la gestion du parc informatique.", skills: ["Linux", "GLPI", "Active Directory", "ITSM"] },
+                { id: 102, title: "Serveur AD & Clients", cat: "Formation", type: "Formation", icon: "fa-solid fa-users text-blue-500", desc: "Installation et configuration d'un contrôleur de domaine Active Directory. Intégration de postes clients sous Windows et Linux, gestion des GPO et des droits utilisateurs.", skills: ["Windows Server", "Active Directory", "GPO", "Linux"] },
+                { id: 103, title: "Pare-feu pfSense & VLANs", cat: "Formation", type: "Formation", icon: "fa-solid fa-shield-halved text-red-500", desc: "Mise en place d'un pare-feu pfSense. Création d'interfaces virtuelles pour segmenter le réseau (VLAN) et élaboration de règles strictes de filtrage (Firewalling).", skills: ["pfSense", "Sécurité", "VLAN", "Routage"] },
+                { id: 104, title: "MOOC ANSSI & Certif Cisco", cat: "Formation", type: "Formation", icon: "fa-solid fa-certificate text-emerald-500", desc: "Validation des acquis en cybersécurité via l'obtention de l'attestation du MOOC de l'ANSSI. Suivi et certification sur les fondamentaux réseaux Cisco.", skills: ["Cybersécurité", "ANSSI", "Réseau Cisco"] },
+                { id: 105, title: "Ticketing & Support N1/N2", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-wrench text-amber-500", desc: "Gestion quotidienne des incidents matériels et logiciels. Diagnostic, prise en main à distance, et résolution technique pour divers clients au sein d'une SCOP.", skills: ["Support", "Diagnostic", "Relation Client"] },
+                { id: 106, title: "Gestion O365 & AD", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-cloud text-blue-400", desc: "Administration courante des locataires (Tenants) Office 365 et des serveurs AD sur site : création d'utilisateurs, gestion des licences, réinitialisation de mots de passe, groupes de sécurité.", skills: ["Office 365", "Active Directory", "Azure AD"] },
+                { id: 107, title: "Reconditionnement & Hardware", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-hard-drive text-slate-500", desc: "Opérations de maintenance matérielle : ajout de RAM, remplacement de disques par des SSD, masterisation et remise en état de postes de travail et de serveurs pour allonger leur durée de vie.", skills: ["Hardware", "Masterisation", "Maintenance"] },
+                { id: 108, title: "Déploiement d'outils", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-gear text-indigo-500", desc: "Participation à la mise en place d'un nouvel outil de prise en main à distance et de gestion d'incidents, facilitant l'intervention rapide des techniciens.", skills: ["RMM", "Support à distance", "Projet interne"] },
+                { id: 109, title: "Configuration Serveur HPE", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-server text-green-600", desc: "Mise en service matérielle et logicielle d'un serveur physique HPE (Hewlett Packard Enterprise). Configuration de la grappe RAID et installation de l'hyperviseur.", skills: ["Serveur HPE", "RAID", "Hardware Entreprise"] },
+                { id: 110, title: "Migration TSE vers O365", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-cloud text-sky-500", desc: "Accompagnement d'un client dans l'évolution de son infrastructure : passage d'un environnement historique TSE (Terminal Server) vers les solutions modernes collaboratives Microsoft 365.", skills: ["Migration Cloud", "Office 365", "TSE/RDS"] },
+                { id: 111, title: "Régie dans les écoles", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-briefcase text-orange-500", desc: "Interventions sur site régulières (Trinitaire, Marie Pilla, Les Chênes, Sancta Maria). Résolution de problèmes de proximité, renouvellement de postes et brassage réseau.", skills: ["Intervention sur site", "Autonomie", "Support Proximité"] },
+                { id: 112, title: "Migration de poste", cat: "Exantis", type: "Exantis", icon: "fa-solid fa-microchip text-teal-600", desc: "Migration complète de postes de travail pour un cabinet avec des contraintes logicielles métiers spécifiques. Sauvegarde, transfert de profil et tests applicatifs.", skills: ["Déploiement", "Logiciels Métiers", "Migration Data"] }
+            ];
 
-        const container = document.getElementById('minor-projects-container');
-        minorProjects.forEach(p => {
-            const div = document.createElement('div');
-            const dataStr = JSON.stringify(p).replace(/"/g, '&quot;');
-            div.innerHTML = `
-                <div onclick="openModal(${dataStr})" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group">
-                    <div class="flex justify-between items-start mb-3">
-                        <div class="p-2 bg-slate-50 rounded-lg group-hover:bg-blue-50 transition-colors"><i class="${p.icon}"></i></div>
-                        <span class="text-[9px] font-bold uppercase tracking-wider bg-slate-100 text-slate-500 px-2 py-1 rounded-full">${p.cat}</span>
+            const container = document.getElementById('minor-projects-container');
+            container.innerHTML = ''; 
+
+            let filteredProjects = minorProjects;
+            if (filter !== 'all') {
+                filteredProjects = minorProjects.filter(p => p.cat === filter);
+            }
+
+            filteredProjects.forEach(p => {
+                const div = document.createElement('div');
+                div.className = "animate-fadeIn h-full";
+                const dataStr = JSON.stringify(p).replace(/"/g, '&quot;');
+                
+                const badgeClass = p.cat === 'Exantis' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700';
+
+                div.innerHTML = `
+                    <div onclick="openModal(${dataStr})" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group h-full flex flex-col">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="p-2 bg-slate-50 rounded-lg group-hover:bg-blue-50 transition-colors"><i class="${p.icon}"></i></div>
+                            <span class="text-[9px] font-bold uppercase tracking-wider ${badgeClass} px-2 py-1 rounded-full">${p.cat}</span>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-sm mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">${p.title}</h4>
+                        <p class="text-xs text-slate-500 line-clamp-2 mt-auto pt-2">Cliquez pour voir les détails.</p>
                     </div>
-                    <h4 class="font-bold text-slate-800 text-sm mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">${p.title}</h4>
-                    <p class="text-xs text-slate-500 line-clamp-2">Cliquez pour voir les détails de l'intervention.</p>
-                </div>
-            `;
-            container.appendChild(div);
-        });
-
-        function openModal(data) {
-            document.getElementById('modal-title').textContent = data.title;
-            document.getElementById('modal-icon').className = data.icon;
-            document.getElementById('modal-desc').textContent = data.desc;
-            
-            const skillsDiv = document.getElementById('modal-skills');
-            skillsDiv.innerHTML = '';
-            data.skills.forEach(s => {
-                skillsDiv.innerHTML += `<span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">${s}</span>`;
+                `;
+                container.appendChild(div);
             });
-            document.getElementById('modal').classList.remove('hidden');
+
+            const activeClass = "flex-1 px-4 py-2.5 rounded-lg text-sm font-bold bg-white text-blue-600 shadow-sm transition-all flex items-center justify-center gap-2";
+            const inactiveClass = "flex-1 px-4 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-slate-700 transition-all flex items-center justify-center gap-2";
+
+            document.getElementById('btn-filter-all').className = filter === 'all' ? activeClass : inactiveClass;
+            document.getElementById('btn-filter-pro').className = filter === 'Exantis' ? activeClass : inactiveClass;
+            document.getElementById('btn-filter-ecole').className = filter === 'Formation' ? activeClass : inactiveClass;
         }
+
+        filterMinorProjects('all');
 
         // --- 5. SCRIPT D'AUTOMATISATION DES 3 FLUX RSS ---
         async function chargerVeilleRSS() {
