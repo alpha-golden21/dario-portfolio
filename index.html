@@ -119,7 +119,8 @@
                                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-indigo-50 rounded-full scale-110 -z-10"></div>
                                 <div class="w-64 h-64 lg:w-96 lg:h-96 bg-slate-800 rounded-full border-8 border-white shadow-2xl flex items-center justify-center relative overflow-hidden group">
                                     <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                                    <img src="photo Dario.png" alt="Photo Dario" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                    <img src="Dario.png" alt="Dario Demange" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                    <i class="fa-solid fa-user text-9xl text-slate-500" style="display:none"></i>
                                     <div class="absolute top-8 left-8 bg-white p-3 rounded-xl shadow-lg animate-bounceSlow">
                                         <i class="fa-solid fa-server text-2xl text-blue-500"></i>
                                     </div>
@@ -901,6 +902,392 @@
                     </div>
                 </div>
             </div>
+            <!-- ============================================================ -->
+            <!-- VUE DÉTAILLÉE : PROJET 3 — ITWAY Infrastructure Multi-Sites -->
+            <!-- ============================================================ -->
+            <div id="project-detail-3" class="hidden animate-fadeIn max-w-7xl mx-auto py-8">
+                <button onclick="hideProjectDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 font-medium transition-colors"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- SIDEBAR -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <div class="bg-gradient-to-br from-teal-600 to-cyan-700 rounded-2xl p-6 text-white">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-building-server"></i></div>
+                                <div><div class="font-bold text-sm text-teal-100 uppercase tracking-wider">Projet Formation</div><div class="font-black text-xl">ITWAY</div></div>
+                            </div>
+                            <p class="text-teal-100 text-xs leading-relaxed">Conception et déploiement complet d'une infrastructure IT pour l'entreprise fictive <strong class="text-white">ITW</strong> — 2 sites, 110 utilisateurs, en binôme BTS SIO.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-slate-800 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider">Fiche Technique</div>
+                            <div class="divide-y divide-slate-100 text-sm">
+                                <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Client</span><span class="font-medium text-slate-800 text-xs">ITW (fictif, épreuve)</span></div>
+                                <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Sites</span><span class="font-medium text-slate-800 text-xs">Marseille (80) + Lille (30)</span></div>
+                                <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Binôme</span><span class="font-medium text-slate-800 text-xs">Dario D. + Silvio E.</span></div>
+                                <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Durée</span><span class="font-medium text-slate-800 text-xs">Oct. 2025 – Mai 2026</span></div>
+                                <div class="p-3">
+                                    <span class="font-bold text-slate-500 text-xs block mb-2">Stack technique</span>
+                                    <div class="flex flex-wrap gap-1.5 text-[10px] font-bold text-teal-700">
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">Proxmox VE</span>
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">pfSense</span>
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">WireGuard VPN</span>
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">Windows Server 2022</span>
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">Wazuh SIEM</span>
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">Centreon</span>
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">GLPI</span>
+                                        <span class="bg-teal-50 px-2 py-1 rounded border border-teal-100">NPS/RADIUS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-teal-600 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider flex items-center gap-2"><i class="fa-solid fa-award"></i> Compétences BTS SIO</div>
+                            <div class="p-4 space-y-2.5 text-xs font-medium text-slate-700">
+                                <div class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-teal-500 shrink-0 mt-0.5"></i><strong>A1.1.1</strong> — Analyse des besoins (contraintes, normes ISO 27001)</div>
+                                <div class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-teal-500 shrink-0 mt-0.5"></i><strong>A3.1.1</strong> — Proposition d'architecture multi-sites</div>
+                                <div class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-teal-500 shrink-0 mt-0.5"></i><strong>A3.2.1</strong> — Configuration services (AD, DHCP, VPN)</div>
+                                <div class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-teal-500 shrink-0 mt-0.5"></i><strong>B1.1</strong> — Supervision (Centreon, Wazuh SIEM)</div>
+                                <div class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-teal-500 shrink-0 mt-0.5"></i><strong>B3.1</strong> — Sécurisation (NPS/RADIUS, GPO, VLANs)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTENU PRINCIPAL -->
+                    <div class="lg:col-span-8 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <div class="inline-block bg-teal-100 text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Dossier Technique — Épreuve BTS SIO</div>
+                            <div class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-500 text-xs font-medium px-3 py-1 rounded-full border border-slate-200"><i class="fa-solid fa-magnifying-glass-plus text-blue-400"></i> Cliquer sur une image pour l'agrandir</div>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">ITWAY — Infrastructure Réseau & Systèmes Multi-Sites</h1>
+                        <p class="text-lg text-slate-700 mb-12 leading-relaxed border-l-4 border-teal-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium"><strong>Situation :</strong> Conception complète de l'infrastructure réseau, système et sécurité pour l'entreprise fictive <strong>ITW</strong> (IT externalisé, 2 sites). Projet réalisé en binôme dans le cadre de l'épreuve BTS SIO — documentation technique livrée à l'issue.</p>
+
+                        <div class="space-y-12">
+                            <!-- S1 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-teal-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">1</span> Présentation de l'entreprise ITW</h2>
+                                <p class="text-slate-700 leading-relaxed mb-4">ITW est une société fictive spécialisée dans <strong>l'externalisation IT, le développement logiciel et la cybersécurité</strong>, fondée en 2005. Elle dispose de deux sites :</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                                    <div class="bg-teal-50 border border-teal-200 rounded-xl p-4">
+                                        <div class="font-black text-teal-700 text-base mb-1"><i class="fa-solid fa-building mr-2"></i>Siège — Marseille</div>
+                                        <div class="text-xs text-slate-600 space-y-1">
+                                            <div><span class="font-bold">80 employés</span> répartis sur 6 départements</div>
+                                            <div>Depts : IT, Logiciel, Support, Administratif, Commercial</div>
+                                            <div>9 VLANs + DMZ + WiFi Interne/Guest</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-cyan-50 border border-cyan-200 rounded-xl p-4">
+                                        <div class="font-black text-cyan-700 text-base mb-1"><i class="fa-solid fa-building mr-2"></i>Antenne — Lille</div>
+                                        <div class="text-xs text-slate-600 space-y-1">
+                                            <div><span class="font-bold">30 employés</span> répartis sur 4 départements</div>
+                                            <div>Depts : Logiciel, Support, Commercial</div>
+                                            <div>5 VLANs dédiés VLAN 110–190</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 rounded-xl border border-slate-200 p-4">
+                                    <h4 class="font-bold text-slate-700 text-sm mb-3">Objectifs du projet</h4>
+                                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-700">
+                                        <div class="flex items-start gap-2"><i class="fa-solid fa-check text-teal-500 shrink-0 mt-0.5"></i>Fiabiliser l'infrastructure avec équipements redondants</div>
+                                        <div class="flex items-start gap-2"><i class="fa-solid fa-check text-teal-500 shrink-0 mt-0.5"></i>Haute disponibilité des services critiques</div>
+                                        <div class="flex items-start gap-2"><i class="fa-solid fa-check text-teal-500 shrink-0 mt-0.5"></i>Sécurité RGPD + ISO 27001</div>
+                                        <div class="flex items-start gap-2"><i class="fa-solid fa-check text-teal-500 shrink-0 mt-0.5"></i>Automatiser le déploiement des ressources IT</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- S2 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-red-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">2</span> Analyse des besoins & contraintes</h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+                                        <h4 class="font-bold text-red-700 text-sm mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Contraintes techniques</h4>
+                                        <ul class="text-xs text-slate-700 space-y-1">
+                                            <li>• Disponibilité <code>24/7</code> des services</li>
+                                            <li>• Sécurisation avancée des accès et données</li>
+                                            <li>• Interconnexion des sites via <code>VPN sécurisé</code></li>
+                                            <li>• Respect des bonnes pratiques <strong>ITIL</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                                        <h4 class="font-bold text-blue-700 text-sm mb-2"><i class="fa-solid fa-shield-halved mr-1"></i> Normes & sécurité</h4>
+                                        <ul class="text-xs text-slate-700 space-y-1">
+                                            <li>• <strong>ISO 27001</strong> — Sécurité des SI</li>
+                                            <li>• <strong>RGPD</strong> — Protection des données</li>
+                                            <li>• <strong>Normes CIS</strong> — Config sécurisée équipements</li>
+                                            <li>• Supervision centralisée des événements</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- S3 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">3</span> Architecture réseau & Plan d'adressage</h2>
+                                <p class="text-slate-700 mb-4 text-sm leading-relaxed">Chaque site est segmenté en VLANs dédiés par département, interconnectés via un pare-feu <strong>pfSense</strong> et un tunnel <strong>VPN WireGuard</strong> chiffré entre les deux sites.</p>
+
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-5">
+                                    <div>
+                                        <div class="bg-teal-600 text-white text-xs font-bold px-4 py-2 rounded-t-xl uppercase tracking-wider">Site Marseille — VLANs</div>
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-xs border-collapse bg-white rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
+                                                <thead><tr class="bg-slate-100 text-slate-600"><th class="p-2 text-left font-bold">VLAN</th><th class="p-2 text-left font-bold">Département</th><th class="p-2 text-left font-bold font-mono">Passerelle</th></tr></thead>
+                                                <tbody class="divide-y divide-slate-100">
+                                                    <tr><td class="p-2 font-bold text-teal-700">SRV</td><td class="p-2">Serveurs</td><td class="p-2 font-mono text-slate-600">10.0.10.1/28</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2 font-bold text-blue-700">20</td><td class="p-2">Dept IT</td><td class="p-2 font-mono text-slate-600">192.168.20.1/27</td></tr>
+                                                    <tr><td class="p-2 font-bold text-blue-700">30</td><td class="p-2">Logiciel</td><td class="p-2 font-mono text-slate-600">192.168.30.1/27</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2 font-bold text-blue-700">40</td><td class="p-2">Support</td><td class="p-2 font-mono text-slate-600">192.168.40.1/27</td></tr>
+                                                    <tr><td class="p-2 font-bold text-blue-700">50</td><td class="p-2">Administratif</td><td class="p-2 font-mono text-slate-600">192.168.50.1/27</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2 font-bold text-blue-700">60</td><td class="p-2">Commercial</td><td class="p-2 font-mono text-slate-600">192.168.60.1/27</td></tr>
+                                                    <tr><td class="p-2 font-bold text-emerald-700">70</td><td class="p-2">WiFi Interne</td><td class="p-2 font-mono text-slate-600">192.168.70.1/25</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2 font-bold text-amber-600">80</td><td class="p-2">WiFi Guest</td><td class="p-2 font-mono text-slate-600">192.168.80.1/24</td></tr>
+                                                    <tr><td class="p-2 font-bold text-red-600">DMZ</td><td class="p-2">Zone démilitarisée</td><td class="p-2 font-mono text-slate-600">172.20.90.1/29</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="bg-cyan-700 text-white text-xs font-bold px-4 py-2 rounded-t-xl uppercase tracking-wider">Site Lille — VLANs</div>
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-xs border-collapse bg-white rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
+                                                <thead><tr class="bg-slate-100 text-slate-600"><th class="p-2 text-left font-bold">VLAN</th><th class="p-2 text-left font-bold">Département</th><th class="p-2 text-left font-bold font-mono">Passerelle</th></tr></thead>
+                                                <tbody class="divide-y divide-slate-100">
+                                                    <tr><td class="p-2 font-bold text-teal-700">110</td><td class="p-2">Serveurs</td><td class="p-2 font-mono text-slate-600">10.0.110.1/28</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2 font-bold text-blue-700">120</td><td class="p-2">Logiciel</td><td class="p-2 font-mono text-slate-600">192.168.120.1/28</td></tr>
+                                                    <tr><td class="p-2 font-bold text-blue-700">130</td><td class="p-2">Support</td><td class="p-2 font-mono text-slate-600">192.168.130.1/28</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2 font-bold text-blue-700">140</td><td class="p-2">Commercial</td><td class="p-2 font-mono text-slate-600">192.168.140.1/28</td></tr>
+                                                    <tr><td class="p-2 font-bold text-red-600">190</td><td class="p-2">DMZ</td><td class="p-2 font-mono text-slate-600">192.168.190.2/29</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="mt-4 bg-slate-900 rounded-xl p-4 text-xs font-mono">
+                                            <p class="text-slate-400 text-[10px] uppercase mb-2 font-bold">// VPN Inter-sites</p>
+                                            <p class="text-emerald-400">Protocole : <code class="bg-transparent text-yellow-300 p-0">WireGuard</code> (tunnel chiffré)</p>
+                                            <p class="text-slate-300 ml-3">SRV-WIREGUARD : <code class="bg-transparent text-sky-300 p-0">192.168.15.2</code></p>
+                                            <p class="text-slate-300 ml-3">Chiffrement : <code class="bg-transparent text-sky-300 p-0">ChaCha20 / Poly1305</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- S4 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">4</span> Virtualisation & Stockage (Proxmox VE)</h2>
+                                <p class="text-slate-700 mb-5 text-sm leading-relaxed">L'ensemble des serveurs est virtualisé sur <strong>Proxmox VE</strong>. Deux configurations RAID garantissent la continuité de service :</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                                    <div class="bg-slate-800 rounded-xl p-5 text-white">
+                                        <div class="font-black text-lg text-amber-400 mb-1">RAID 1</div>
+                                        <div class="text-xs text-slate-300 space-y-1">
+                                            <div>2 × 600 Go — <strong class="text-white">miroir</strong></div>
+                                            <div>Usage : Proxmox OS + sauvegardes critiques</div>
+                                            <div>Tolérance : perte d'1 disque sans interruption</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-800 rounded-xl p-5 text-white">
+                                        <div class="font-black text-lg text-emerald-400 mb-1">RAID 5</div>
+                                        <div class="text-xs text-slate-300 space-y-1">
+                                            <div>4 × 1.2 To — <strong class="text-white">parité distribuée</strong></div>
+                                            <div>Usage : stockage des disques VM</div>
+                                            <div>Tolérance : perte d'1 disque, capacité utile 3.6 To</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Site Marseille -->
+                                <div class="mb-4">
+                                    <div class="bg-teal-600 text-white text-xs font-bold px-4 py-2 rounded-t-xl uppercase tracking-wider">Site Marseille — Serveurs VM</div>
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full text-xs border-collapse bg-white rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
+                                            <thead><tr class="bg-slate-800 text-white"><th class="p-2 text-left font-bold">Serveur</th><th class="p-2 text-left font-bold">IP</th><th class="p-2 text-left font-bold">Rôle</th><th class="p-2 text-left font-bold">OS</th><th class="p-2 text-left font-bold">RAM</th><th class="p-2 text-left font-bold">Disque</th></tr></thead>
+                                            <tbody class="divide-y divide-slate-100 text-slate-700">
+                                                <tr class="bg-orange-50"><td class="p-2 font-bold font-mono text-orange-700">SRVM-PFSENSE</td><td class="p-2 font-mono">10.0.0.1</td><td class="p-2">Pare-feu / Routeur + DMZ/LAN</td><td class="p-2">pfSense</td><td class="p-2">4 Go</td><td class="p-2">50 Go</td></tr>
+                                                <tr class="bg-teal-50"><td class="p-2 font-bold font-mono text-teal-700">SRVM-AD</td><td class="p-2 font-mono">10.0.10.2</td><td class="p-2">Active Directory + DHCP + DNS</td><td class="p-2">Windows Server 2022</td><td class="p-2">8 Go</td><td class="p-2">50 Go</td></tr>
+                                                <tr><td class="p-2 font-mono">SRVM-DATA</td><td class="p-2 font-mono">10.0.10.3</td><td class="p-2">Stockage &amp; Sauvegarde (SMB)</td><td class="p-2">Windows Server 2022</td><td class="p-2">4 Go</td><td class="p-2">50 Go</td></tr>
+                                                <tr class="bg-slate-50"><td class="p-2 font-mono">SRVM-GLPI</td><td class="p-2 font-mono">10.0.10.4</td><td class="p-2">Ticketing ITSM (GLPI)</td><td class="p-2">Debian 13</td><td class="p-2">1 Go</td><td class="p-2">20 Go</td></tr>
+                                                <tr><td class="p-2 font-mono">SRVM-WAZUH</td><td class="p-2 font-mono">10.0.10.5</td><td class="p-2">SIEM / XDR — Collecte logs</td><td class="p-2">Debian 13</td><td class="p-2">4 Go</td><td class="p-2">20 Go</td></tr>
+                                                <tr class="bg-slate-50"><td class="p-2 font-mono">SRVM-NEXTCLOUD</td><td class="p-2 font-mono">10.0.10.6</td><td class="p-2">PKI (ADCS) + Stockage cloud</td><td class="p-2">Debian 13</td><td class="p-2">4 Go</td><td class="p-2">50 Go</td></tr>
+                                                <tr><td class="p-2 font-mono">SRVM-CENTREON</td><td class="p-2 font-mono">10.0.10.7</td><td class="p-2">Supervision réseau</td><td class="p-2">Debian 12</td><td class="p-2">2 Go</td><td class="p-2">30 Go</td></tr>
+                                                <tr class="bg-slate-50"><td class="p-2 font-mono">SRVM-MYSQL</td><td class="p-2 font-mono">10.0.10.8</td><td class="p-2">Base de données (GLPI)</td><td class="p-2">Debian 13</td><td class="p-2">4 Go</td><td class="p-2">20 Go</td></tr>
+                                                <tr><td class="p-2 font-mono">SRVM-ARTICA</td><td class="p-2 font-mono">10.0.10.9</td><td class="p-2">Proxy filtrant (Blacklist UT1)</td><td class="p-2">Artica ISO</td><td class="p-2">4 Go</td><td class="p-2">100 Go</td></tr>
+                                                <tr class="bg-slate-50"><td class="p-2 font-mono">SRVM-RDS</td><td class="p-2 font-mono">10.0.10.10</td><td class="p-2">Bureau à distance (RDP)</td><td class="p-2">Windows Server 2022</td><td class="p-2">4 Go</td><td class="p-2">40 Go</td></tr>
+                                                <tr><td class="p-2 font-mono">SRVM-MAIL</td><td class="p-2 font-mono">10.0.10.11</td><td class="p-2">DNS + Messagerie</td><td class="p-2">Debian 13</td><td class="p-2">1 Go</td><td class="p-2">30 Go</td></tr>
+                                                <tr class="bg-slate-50"><td class="p-2 font-mono">SRV-WIREGUARD</td><td class="p-2 font-mono">192.168.15.25</td><td class="p-2">Serveur VPN WireGuard</td><td class="p-2">Debian 13</td><td class="p-2">1 Go</td><td class="p-2">10 Go</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- Site Lille -->
+                                <div>
+                                    <div class="bg-cyan-700 text-white text-xs font-bold px-4 py-2 rounded-t-xl uppercase tracking-wider">Site Lille — Serveurs VM</div>
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full text-xs border-collapse bg-white rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
+                                            <thead><tr class="bg-slate-800 text-white"><th class="p-2 text-left font-bold">Serveur</th><th class="p-2 text-left font-bold">IP</th><th class="p-2 text-left font-bold">Rôle</th><th class="p-2 text-left font-bold">OS</th><th class="p-2 text-left font-bold">RAM</th><th class="p-2 text-left font-bold">Disque</th></tr></thead>
+                                            <tbody class="divide-y divide-slate-100 text-slate-700">
+                                                <tr class="bg-orange-50"><td class="p-2 font-bold font-mono text-orange-700">SRVL-PFSENSE</td><td class="p-2 font-mono">10.0.110.1</td><td class="p-2">Pare-feu / Passerelle Internet</td><td class="p-2">pfSense</td><td class="p-2">2 Go</td><td class="p-2">32 Go</td></tr>
+                                                <tr class="bg-teal-50"><td class="p-2 font-bold font-mono text-teal-700">SRVL-AD</td><td class="p-2 font-mono">10.0.110.2</td><td class="p-2">AD secondaire + DHCP + DNS</td><td class="p-2">Windows Server 2022</td><td class="p-2">6 Go</td><td class="p-2">100 Go</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- S5 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">5</span> Active Directory, NPS/RADIUS & Groupes de Sécurité</h2>
+                                <p class="text-slate-700 mb-5 text-sm leading-relaxed">L'annuaire <strong>Active Directory</strong> multi-sites (<code>ITWAY.local</code>) relie les deux contrôleurs de domaine (SRVM-AD + SRVL-AD). Convention de nommage : <code>SRV[M/L]-SERVICE</code> — M pour Marseille, L pour Lille.</p>
+
+                                <!-- NPS/RADIUS -->
+                                <h3 class="font-bold text-slate-700 text-base mb-3 flex items-center gap-2"><i class="fa-solid fa-wifi text-purple-500"></i> Clients RADIUS configurés (NPS)</h3>
+                                <p class="text-xs text-slate-500 mb-3">Le serveur NPS centralise l'authentification des équipements réseau via le domaine <code>ITWAY.local</code>.</p>
+                                <div class="overflow-x-auto mb-6">
+                                    <table class="w-full text-xs border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200">
+                                        <thead><tr class="bg-purple-700 text-white"><th class="p-2 text-left font-bold">Nom du client</th><th class="p-2 text-left font-bold">Adresse IP</th><th class="p-2 text-left font-bold">Rôle dans l'infrastructure</th></tr></thead>
+                                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                                            <tr class="bg-purple-50"><td class="p-2 font-mono font-bold text-purple-700">Borne-OpenWrt</td><td class="p-2 font-mono">192.168.70.2</td><td class="p-2">Point d'accès WiFi — SSID entreprise — Auth WPA2-Enterprise (802.1X)</td></tr>
+                                            <tr><td class="p-2 font-mono font-bold text-purple-700">Artica-Proxy</td><td class="p-2 font-mono">10.0.10.9</td><td class="p-2">Proxy filtrant web — Identification des utilisateurs par groupe AD via RADIUS</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Groupes de sécurité -->
+                                <h3 class="font-bold text-slate-700 text-base mb-3 flex items-center gap-2"><i class="fa-solid fa-users-gear text-blue-500"></i> Groupes de Sécurité AD</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                    <div>
+                                        <div class="bg-teal-600 text-white text-xs font-bold px-4 py-2 rounded-t-xl uppercase tracking-wider">GRP-SECU — Marseille</div>
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-xs border-collapse bg-white rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
+                                                <thead><tr class="bg-slate-100 text-slate-600"><th class="p-2 text-left font-bold">Service</th><th class="p-2 text-left font-bold">Nom du groupe</th></tr></thead>
+                                                <tbody class="divide-y divide-slate-100 text-slate-700">
+                                                    <tr><td class="p-2">Administratif</td><td class="p-2 font-mono text-[10px]">GRP-SECU-MRS-ADMINISTRATIF</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2">Commercial</td><td class="p-2 font-mono text-[10px]">GRP-SECU-MRS-COMMERCIAL</td></tr>
+                                                    <tr><td class="p-2">Département IT</td><td class="p-2 font-mono text-[10px]">GRP-SECU-MRS-DEPARTEMENT-IT</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2">Département Logiciel</td><td class="p-2 font-mono text-[10px]">GRP-SECU-MRS-DEPARTEMENT-LOG</td></tr>
+                                                    <tr><td class="p-2">Support</td><td class="p-2 font-mono text-[10px]">GRP-SECU-MRS-SUPPORT</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="bg-cyan-700 text-white text-xs font-bold px-4 py-2 rounded-t-xl uppercase tracking-wider">GRP-SECU — Lille</div>
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-xs border-collapse bg-white rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
+                                                <thead><tr class="bg-slate-100 text-slate-600"><th class="p-2 text-left font-bold">Service</th><th class="p-2 text-left font-bold">Nom du groupe</th></tr></thead>
+                                                <tbody class="divide-y divide-slate-100 text-slate-700">
+                                                    <tr><td class="p-2">Commercial</td><td class="p-2 font-mono text-[10px]">GRP-SECU-LIL-COMMERCIAL</td></tr>
+                                                    <tr class="bg-slate-50"><td class="p-2">Département Logiciel</td><td class="p-2 font-mono text-[10px]">GRP-SECU-LIL-DEPARTEMENT-LOG</td></tr>
+                                                    <tr><td class="p-2">Support</td><td class="p-2 font-mono text-[10px]">GRP-SECU-LIL-SUPPORT</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Structure DHCP -->
+                                <div class="bg-slate-900 rounded-xl p-5 text-sm font-mono">
+                                    <p class="text-slate-400 text-[10px] uppercase mb-3 font-bold">// DHCP Marseille — Étendues par VLAN</p>
+                                    <p class="text-emerald-400">VLAN <code class="bg-transparent text-yellow-300 p-0">20</code> (IT)          → 192.168.20.10 – 192.168.20.30</p>
+                                    <p class="text-emerald-400">VLAN <code class="bg-transparent text-yellow-300 p-0">30</code> (Logiciel)    → 192.168.30.10 – 192.168.30.30</p>
+                                    <p class="text-emerald-400">VLAN <code class="bg-transparent text-yellow-300 p-0">40</code> (Support)     → 192.168.40.10 – 192.168.40.30</p>
+                                    <p class="text-emerald-400">VLAN <code class="bg-transparent text-yellow-300 p-0">50</code> (Admin)       → 192.168.50.10 – 192.168.50.30</p>
+                                    <p class="text-emerald-400">VLAN <code class="bg-transparent text-yellow-300 p-0">60</code> (Commercial)  → 192.168.60.10 – 192.168.60.30</p>
+                                    <p class="text-emerald-400">VLAN <code class="bg-transparent text-yellow-300 p-0">70</code> (WiFi-Int)    → 192.168.70.10 – 192.168.70.126  · Auth <code class="bg-transparent text-sky-300 p-0">NPS/RADIUS</code></p>
+                                    <p class="text-emerald-400">VLAN <code class="bg-transparent text-yellow-300 p-0">80</code> (WiFi-Guest)  → 192.168.80.10 – 192.168.80.252  · Portail captif</p>
+                                </div>
+                            </div>
+
+                            <!-- S5b GPO -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-indigo-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">6</span> Déploiement des GPO</h2>
+                                <p class="text-slate-700 mb-4 text-sm leading-relaxed">Plusieurs GPO assurent la <strong>sécurisation, la standardisation et le déploiement automatisé</strong> des outils sur l'ensemble des postes du domaine <code>ITWAY.local</code>.</p>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-xs border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200">
+                                        <thead><tr class="bg-indigo-700 text-white"><th class="p-2 text-left font-bold">Nom de la GPO</th><th class="p-2 text-left font-bold">Objectif principal</th><th class="p-2 text-left font-bold">Catégorie</th></tr></thead>
+                                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                                            <tr class="bg-slate-50"><td class="p-2 font-mono font-bold text-indigo-700">Default Domain Controllers Policy</td><td class="p-2">Paramètres de sécurité des Contrôleurs de Domaine (droits de connexion)</td><td class="p-2"><span class="bg-red-50 text-red-700 px-1.5 py-0.5 rounded font-bold">Sécurité système</span></td></tr>
+                                            <tr><td class="p-2 font-mono font-bold text-indigo-700">Default Domain Policy</td><td class="p-2">Politique globale du domaine : mots de passe, verrouillage de session</td><td class="p-2"><span class="bg-red-50 text-red-700 px-1.5 py-0.5 rounded font-bold">Sécurité globale</span></td></tr>
+                                            <tr class="bg-slate-50"><td class="p-2 font-mono font-bold text-indigo-700">GPO_Optimisation_ITWAY</td><td class="p-2">Réglages de confort et performance (menu démarrer, apps superflues)</td><td class="p-2"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded font-bold">Performance</span></td></tr>
+                                            <tr><td class="p-2 font-mono font-bold text-indigo-700">GPO_Socle_Securite</td><td class="p-2">Hardening : désactivation USB, pare-feu Windows, restriction droits admin</td><td class="p-2"><span class="bg-red-50 text-red-700 px-1.5 py-0.5 rounded font-bold">Conformité &amp; Sécurité</span></td></tr>
+                                            <tr class="bg-slate-50"><td class="p-2 font-mono font-bold text-indigo-700">GPO_TSE_Deconnexion</td><td class="p-2">Expiration des sessions inactives sur serveurs RDS/TSE</td><td class="p-2"><span class="bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded font-bold">Gestion ressources</span></td></tr>
+                                            <tr><td class="p-2 font-mono font-bold text-indigo-700">GPO_TSE_GLPI</td><td class="p-2">Configuration accès GLPI ou installation agent sur sessions distantes</td><td class="p-2"><span class="bg-teal-50 text-teal-700 px-1.5 py-0.5 rounded font-bold">Supervision</span></td></tr>
+                                            <tr class="bg-slate-50"><td class="p-2 font-mono font-bold text-indigo-700">GPO_AGENT_GLPI</td><td class="p-2">Déploiement automatisé MSI agent GLPI — remontée d'inventaire</td><td class="p-2"><span class="bg-teal-50 text-teal-700 px-1.5 py-0.5 rounded font-bold">Automatisation</span></td></tr>
+                                            <tr><td class="p-2 font-mono font-bold text-indigo-700">GPO_FIREFOX</td><td class="p-2">Configuration centralisée du navigateur Firefox</td><td class="p-2"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded font-bold">Standardisation</span></td></tr>
+                                            <tr class="bg-slate-50"><td class="p-2 font-mono font-bold text-indigo-700">GPO_WIRESHARK</td><td class="p-2">Déploiement logiciel analyse réseau Wireshark</td><td class="p-2"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded font-bold">Outil admin</span></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="mt-4 bg-indigo-50 border border-indigo-200 rounded-xl p-4 text-xs text-slate-700 leading-relaxed">
+                                    <i class="fa-solid fa-circle-info text-indigo-500 mr-2"></i>Le déploiement via GPO garantit un gain de temps significatif, une réduction des erreurs humaines et le respect des politiques de sécurité sur l'ensemble du parc. Chaque GPO cible une OU spécifique pour éviter les effets de bord.
+                                </div>
+                            </div>
+
+                            <!-- S7 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">7</span> Supervision & Sécurité (Wazuh + Centreon)</h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
+                                    <div class="bg-slate-800 rounded-xl p-5 text-white">
+                                        <div class="flex items-center gap-3 mb-3"><div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center"><i class="fa-solid fa-shield-halved text-red-400"></i></div><div class="font-bold">Wazuh — SIEM / XDR</div></div>
+                                        <ul class="text-xs text-slate-300 space-y-1.5">
+                                            <li>• Collecte et corrélation de logs en temps réel</li>
+                                            <li>• Détection d'intrusions (<code class="text-sky-300">HIDS</code>)</li>
+                                            <li>• Alertes sur comportements suspects</li>
+                                            <li>• Tableau de bord centralisation incidents</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-slate-800 rounded-xl p-5 text-white">
+                                        <div class="flex items-center gap-3 mb-3"><div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center"><i class="fa-solid fa-chart-line text-blue-400"></i></div><div class="font-bold">Centreon — Supervision</div></div>
+                                        <ul class="text-xs text-slate-300 space-y-1.5">
+                                            <li>• Monitoring CPU, RAM, disques, réseau</li>
+                                            <li>• Seuils d'alerte et notifications email</li>
+                                            <li>• Supervision des VMs Proxmox et services</li>
+                                            <li>• Tableaux de bord par site</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="text-slate-700 text-sm leading-relaxed">Cette double couche (supervision + SIEM) permet de détecter aussi bien les pannes matérielles que les tentatives d'intrusion, en conformité avec les exigences <strong>ISO 27001</strong>.</p>
+                            </div>
+
+                            <!-- S8 -->
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="bg-slate-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">8</span> Bilan & Compétences acquises</h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+                                    <div class="bg-teal-50 border border-teal-200 rounded-xl p-4 text-center"><div class="text-2xl font-black text-teal-600">9+</div><div class="text-sm font-bold text-slate-700">VLANs Marseille</div></div>
+                                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center"><div class="text-2xl font-black text-blue-600">12</div><div class="text-sm font-bold text-slate-700">Serveurs virtuels</div></div>
+                                    <div class="bg-purple-50 border border-purple-200 rounded-xl p-4 text-center"><div class="text-2xl font-black text-purple-600">2</div><div class="text-sm font-bold text-slate-700">Sites interconnectés</div></div>
+                                </div>
+                                <p class="text-slate-700 leading-relaxed text-justify">Ce projet m'a permis d'appréhender la <strong>conception globale d'une infrastructure d'entreprise</strong> : du plan d'adressage IP à la supervision sécurisée, en passant par la virtualisation et le VPN inter-sites. Les technologies comme <code>Wazuh</code>, <code>Proxmox</code> et <code>pfSense</code> m'ont donné une vision concrète des architectures que je rencontre en entreprise chez Exantis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- VUE DÉTAILLÉE : PETITS PROJETS (rendu dynamique par JS)    -->
+            <!-- ============================================================ -->
+            <div id="project-detail-minor" class="hidden animate-fadeIn max-w-7xl mx-auto py-8 px-4">
+                <button onclick="hideProjectDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 font-medium transition-colors"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- SIDEBAR -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <div id="pmd-header" class="rounded-2xl p-6 text-white"></div>
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div id="pmd-fiche-header" class="bg-slate-800 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider">Fiche Technique</div>
+                            <div id="pmd-fiche-body" class="divide-y divide-slate-100 text-sm"></div>
+                        </div>
+                        <div id="pmd-skills-section" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden"></div>
+                    </div>
+                    <!-- CONTENU PRINCIPAL -->
+                    <div class="lg:col-span-8">
+                        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+                            <div id="pmd-badges" class="flex flex-wrap items-center gap-3 mb-4"></div>
+                            <h1 id="pmd-title" class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight"></h1>
+                            <p id="pmd-intro" class="text-lg text-slate-700 mb-12 leading-relaxed border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium"></p>
+                            <div id="pmd-sections" class="space-y-12"></div>
+                            <div id="pmd-bilan" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 mb-6"></div>
+                            <div id="pmd-conclusion" class="bg-slate-900 rounded-2xl p-8 text-white border-b-4 border-blue-500 mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- ========================================================= -->
@@ -955,6 +1342,226 @@
                     <p>Récupération des derniers articles en cours...</p>
                 </div>
             </div>
+
+            <!-- ═══ ARTICLES RETENUS ═══ -->
+            <div class="mb-16">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-3">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-bookmark text-indigo-500"></i> Mes Articles Retenus
+                        </h3>
+                        <p class="text-sm text-slate-500 mt-1">Sélection personnelle — cyber &amp; réseau · oct. 2024 – mars 2026 · mise à jour régulière</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="scrollArticles(-1)" class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow-sm hover:bg-blue-50 hover:border-blue-300 transition-all flex items-center justify-center text-slate-600 hover:text-blue-600">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button onclick="scrollArticles(1)" class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow-sm hover:bg-blue-50 hover:border-blue-300 transition-all flex items-center justify-center text-slate-600 hover:text-blue-600">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="articles-track-outer" class="overflow-hidden rounded-2xl">
+                    <div id="articles-track" class="flex gap-5" style="will-change:transform;">
+
+                        <!-- 1 — Fuite Free Oct 2024 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-red-600 to-rose-500 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Numerama</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Oct. 2024</span>
+                                </div>
+                                <span class="bg-red-800/50 text-red-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Fuite · Free Telecom</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Fuite Free : 19 millions de clients et IBAN exposés</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Un pirate publie les données personnelles de 19 M de clients Free (noms, adresses, e-mails, IBAN). Aucun chiffrement des IBAN en base. Cet incident rappelle l'obligation RGPD de chiffrer les données sensibles dès le stockage.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-red-50 text-red-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-red-100">RGPD / Données</span>
+                                    <a href="https://www.numerama.com/cyberguerre/1836534-free-confirme-une-importante-fuite-de-donnees.html" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2 — NIS2 Oct 2024 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-blue-700 to-blue-600 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">ANSSI</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Oct. 2024</span>
+                                </div>
+                                <span class="bg-blue-800/50 text-blue-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Réglementation · NIS 2</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Directive NIS 2 — Transposition française &amp; nouvelles obligations</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Extension des exigences cybersécurité à 18 secteurs. Obligation de signalement sous 24h, supervision SOC, tests de pénétration réguliers. Les PME clientes d'Exantis sont potentiellement concernées.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-blue-100">Réglementation UE</span>
+                                    <a href="https://www.ssi.gouv.fr/entreprise/reglementation/nis-2/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 — Quishing / QR codes Nov 2024 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-amber-600 to-yellow-500 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">IT-Connect</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Nov. 2024</span>
+                                </div>
+                                <span class="bg-amber-800/50 text-amber-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Phishing · Quishing</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Quishing — Arnaques au QR code en forte hausse en France</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Les QR codes malveillants contournent les filtres e-mail traditionnels. Faux horodateurs de parking, fausses factures électroniques… Les antivirus ne scannent pas les images PNG. Sensibilisation des utilisateurs obligatoire.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-amber-50 text-amber-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-amber-100">Phishing / Social</span>
+                                    <a href="https://www.it-connect.fr/quest-ce-que-le-quishing-arnaque-qr-code/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 — Salt Typhoon Nov 2024 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-slate-700 to-slate-600 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">LMI</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Nov. 2024</span>
+                                </div>
+                                <span class="bg-slate-800/50 text-slate-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Espionnage · Salt Typhoon</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Salt Typhoon — Des hackers d'État chinois dans les opérateurs US</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Le groupe APT chinois « Salt Typhoon » infiltre AT&amp;T, Verizon et T-Mobile pendant des mois pour écouter des communications officielles. L'attaque passe par des équipements réseau sans mise à jour de firmware.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-slate-200">APT / Espionnage</span>
+                                    <a href="https://www.lemondeinformatique.fr/actualites/lire-salt-typhoon-les-hackers-chinois-piratent-les-operateurs-americains-95764.html" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 — CVE-2024-55591 FortiOS Jan 2025 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-orange-600 to-amber-500 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">CERT-FR</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Jan. 2025</span>
+                                </div>
+                                <span class="bg-orange-800/50 text-orange-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Fortinet · Zero-Day</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">CVE-2024-55591 — Zero-day FortiOS exploité activement (CVSS 9.8)</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Contournement d'authentification sur FortiOS &amp; FortiProxy permettant d'obtenir les droits super-admin à distance. Exploitation détectée dans la nature avant le patch. Mise à jour en urgence sur tous les FortiGates Exantis.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-orange-50 text-orange-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-orange-100">Fortinet / Firewall</span>
+                                    <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-001/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5 — FortiGate configs leak Jan 2025 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-red-700 to-rose-600 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">CERT-FR</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Jan. 2025</span>
+                                </div>
+                                <span class="bg-red-900/50 text-red-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Fortinet · Fuite Configs</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Fuite de ~15 000 configs FortiGate publiées en ligne</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Un acteur malveillant publie les configurations de 15 000 FortiGates incluant identifiants et clés VPN. Vérification immédiate des firmwares chez tous les clients Exantis concernés. Rappel de l'importance du patching régulier.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-red-50 text-red-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-red-100">Fortinet / Patch</span>
+                                    <a href="https://www.cert.ssi.gouv.fr/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">CERT-FR <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6 — WiFi 7 certification Jan 2025 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-emerald-600 to-teal-500 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Wi-Fi Alliance</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Jan. 2025</span>
+                                </div>
+                                <span class="bg-emerald-800/50 text-emerald-100 text-[10px] font-bold px-2 py-0.5 rounded-full">WiFi 7 · 802.11be</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Wi-Fi 7 (802.11be) — Certification officielle &amp; Multi-Link Operation</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">La Wi-Fi Alliance lance la certification WiFi 7 : connexion simultanée sur 3 bandes (2,4 / 5 / 6 GHz), débit théorique 46 Gbps, latence &lt; 1ms. Les FortiAP WiFi 6 déployés sont déjà prêts pour la migration future.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-emerald-100">WiFi / 802.11</span>
+                                    <a href="https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7 — DORA Jan 2025 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-violet-600 to-purple-500 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">ANSSI</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Jan. 2025</span>
+                                </div>
+                                <span class="bg-violet-800/50 text-violet-100 text-[10px] font-bold px-2 py-0.5 rounded-full">DORA · Réglementation</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Règlement DORA — La cyber devient obligatoire dans la finance UE</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Digital Operational Resilience Act : banques, assurances et fintech UE doivent tester leur résistance aux cyberattaques chaque année et notifier les incidents en 4h. Complète NIS 2 pour le secteur financier.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-violet-50 text-violet-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-violet-100">Finance / Résilience</span>
+                                    <a href="https://www.ssi.gouv.fr/actualite/dora-renforcer-la-resilience-operationnelle-numerique-du-secteur-financier/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9 — 802.1X NPS Jan 2025 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-indigo-600 to-blue-500 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">IT-Connect</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Jan. 2025</span>
+                                </div>
+                                <span class="bg-indigo-800/50 text-indigo-100 text-[10px] font-bold px-2 py-0.5 rounded-full">802.1X · NAC</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">802.1X &amp; NPS/RADIUS : contrôle d'accès réseau par certificat</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Authentification réseau par certificats machine via NPS/RADIUS et GPO. Empêche tout équipement non autorisé de se connecter au LAN ou au WiFi. Implémenté dans le projet ITWAY (serveur NPS, VLAN Serveur).</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-indigo-100">802.1X / NPS</span>
+                                    <a href="https://www.it-connect.fr/802-1x-authentification-reseau/" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10 — Ransomwares VPN Fév 2025 -->
+                        <div class="article-card shrink-0 w-[320px] bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+                            <div class="bg-gradient-to-r from-yellow-600 to-orange-500 p-4 rounded-t-2xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="bg-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">CERT-FR</span>
+                                    <span class="text-white/70 text-[10px] font-mono">Fév. 2025</span>
+                                </div>
+                                <span class="bg-yellow-800/50 text-yellow-100 text-[10px] font-bold px-2 py-0.5 rounded-full">Ransomware · Équip. réseau</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">Ransomwares ciblant les équipements réseau périmétriques</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed flex-1">Multiplication des attaques sur VPN/firewalls comme vecteur initial (Ivanti, Fortinet, Cisco). L'accès au réseau via un équipement compromis donne accès à l'ensemble du SI. Segmentation VLAN = confinement vital.</p>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
+                                    <span class="bg-yellow-50 text-yellow-700 text-[10px] font-bold px-2 py-1 rounded-lg border border-yellow-100">Ransomware / VPN</span>
+                                    <a href="https://www.cert.ssi.gouv.fr/uploads/CERTFR-2024-CTI-001.pdf" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">Lire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- end track -->
+                </div><!-- end outer -->
+
+                <!-- indicateurs de progression -->
+                <div id="articles-dots" class="flex justify-center gap-2 mt-5"></div>
+            </div>
+            <!-- ═══ FIN ARTICLES RETENUS ═══ -->
 
             <div class="bg-slate-900 rounded-2xl shadow-xl p-8 md:p-12 text-white border-b-4 border-indigo-500">
                 <h3 class="text-2xl font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-lightbulb text-amber-400"></i> Impact sur ma pratique professionnelle</h3>
@@ -1067,8 +1674,68 @@
         }
         function hideProjectDetail() {
             document.getElementById('projects-grid-view').classList.remove('hidden');
-            document.getElementById('project-detail-1').classList.add('hidden');
-            document.getElementById('project-detail-2').classList.add('hidden');
+            ['1','2','3','minor'].forEach(id => document.getElementById(`project-detail-${id}`).classList.add('hidden'));
+        }
+
+        function showMinorProject(id) {
+            const p = (typeof minorProjects !== 'undefined' ? minorProjects : window._minorProjects || []).find(x => x.id === id);
+            if (!p || !p.detail) return;
+            const d = p.detail;
+
+            // --- Header sidebar ---
+            const hdr = document.getElementById('pmd-header');
+            hdr.className = `bg-gradient-to-br ${d.gradient} rounded-2xl p-6 text-white`;
+            hdr.innerHTML = `<div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="${d.icon} text-white"></i></div>
+                <div><div class="font-bold text-sm text-white/70 uppercase tracking-wider">${d.type}</div><div class="font-black text-xl leading-tight">${p.title}</div></div>
+            </div><p class="text-white/80 text-xs leading-relaxed">${d.desc}</p>`;
+
+            // --- Fiche technique ---
+            document.getElementById('pmd-fiche-body').innerHTML = `
+                <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Catégorie</span><span class="font-medium text-slate-800 text-xs">${p.cat}</span></div>
+                <div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Période</span><span class="font-medium text-slate-800 text-xs">${p.period}</span></div>
+                ${d.client ? `<div class="p-3 flex justify-between"><span class="font-bold text-slate-500 text-xs">Client</span><span class="font-medium text-slate-800 text-xs">${d.client}</span></div>` : ''}
+                <div class="p-3"><span class="font-bold text-slate-500 text-xs block mb-2">Stack technique</span>
+                <div class="flex flex-wrap gap-1.5">${(p.skills||[]).map(s=>`<span class="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100">${s}</span>`).join('')}</div></div>`;
+
+            // --- BTS skills ---
+            const sk = document.getElementById('pmd-skills-section');
+            if (d.btsSkills && d.btsSkills.length) {
+                sk.style.display='';
+                sk.innerHTML = `<div class="bg-blue-600 text-white text-sm font-bold py-3 px-4 uppercase tracking-wider flex items-center gap-2"><i class="fa-solid fa-award"></i> Compétences BTS SIO</div>
+                    <div class="p-4 space-y-2.5 text-xs font-medium text-slate-700">${d.btsSkills.map(s=>`<div class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-blue-500 shrink-0 mt-0.5"></i>${s}</div>`).join('')}</div>`;
+            } else { sk.style.display='none'; }
+
+            // --- Title + intro ---
+            document.getElementById('pmd-badges').innerHTML = `<div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">${d.type}</div><div class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-500 text-xs font-medium px-3 py-1 rounded-full border border-slate-200"><i class="fa-solid fa-magnifying-glass-plus text-blue-400"></i> Cliquer sur une image pour l'agrandir</div>`;
+            document.getElementById('pmd-title').textContent = p.title;
+            const intro = document.getElementById('pmd-intro');
+            intro.style.borderLeftColor = d.accentColor || '#3b82f6';
+            intro.innerHTML = `<strong>Situation :</strong> ${d.intro}`;
+
+            // --- Numbered sections ---
+            document.getElementById('pmd-sections').innerHTML = (d.sections||[]).map(s => {
+                let imgs = '';
+                if (s.images && s.images.length === 2) {
+                    imgs = `<div class="grid grid-cols-2 gap-3 mt-4">${s.images.map(i=>`<img src="${i}" alt="${s.title}" onclick="openLightbox(this.src)" class="img-zoom w-full rounded-lg border border-slate-200 shadow-sm object-cover" style="max-height:200px;object-fit:cover;">`).join('')}</div>`;
+                } else if (s.images && s.images.length === 1) {
+                    imgs = `<div class="mt-4"><img src="${s.images[0]}" alt="${s.title}" onclick="openLightbox(this.src)" class="img-zoom w-full rounded-lg border border-slate-200 shadow-sm object-cover" style="max-height:280px;object-fit:cover;"></div>`;
+                }
+                const code = s.code ? `<div class="bg-slate-900 rounded-xl p-4 mt-4 text-xs font-mono overflow-x-auto"><p class="text-slate-400 text-[10px] uppercase mb-2 font-bold">// ${s.codeLabel||'Config'}</p>${s.code}</div>` : '';
+                return `<div><h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3"><span class="${s.bgColor||'bg-blue-600'} text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">${s.num}</span>${s.title}</h2><div class="text-slate-700 leading-relaxed text-sm">${s.html}</div>${imgs}${code}</div>`;
+            }).join('');
+
+            // --- Stats bilan ---
+            const colors = [['teal-50','teal-200','teal-600'],['blue-50','blue-200','blue-600'],['purple-50','purple-200','purple-600']];
+            document.getElementById('pmd-bilan').innerHTML = (d.stats||[]).slice(0,3).map((s,i)=>`<div class="bg-${colors[i][0]} border border-${colors[i][1]} rounded-xl p-4 text-center"><div class="text-2xl font-black text-${colors[i][2]}">${s.val}</div><div class="text-sm font-bold text-slate-700 mt-1">${s.lbl}</div></div>`).join('');
+
+            // --- Conclusion ---
+            document.getElementById('pmd-conclusion').innerHTML = d.conclusion ? `<h3 class="text-xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-lightbulb text-amber-400"></i> Bilan</h3><p class="text-slate-300 leading-relaxed text-sm">${d.conclusion}</p>` : '';
+
+            // --- Show ---
+            document.getElementById('projects-grid-view').classList.add('hidden');
+            document.getElementById('project-detail-minor').classList.remove('hidden');
+            window.scrollTo(0,0);
         }
 
         // --- 4. MODAL ---
@@ -1116,7 +1783,33 @@
                     period: "01/12/2024 – 15/12/2024",
                     icon: "fa-solid fa-server text-purple-500",
                     desc: "<strong>Situation :</strong> Formation pratique au déploiement d'une solution ITSM open-source sur Linux.<br><br><strong>Procédure :</strong> Installation d'<strong>Ubuntu Server 22.04</strong> en machine virtuelle. Configuration du stack <code>LAMP</code> (Apache2, MariaDB, PHP 8.1). Téléchargement et installation de <strong>GLPI 10.x</strong> via CLI. Intégration <code>LDAP/AD</code> pour authentification centralisée <code>SSO</code>. Paramétrage des profils techniciens, des catégories de tickets et des SLA.<br><br><strong>Résultat :</strong> Plateforme ITSM opérationnelle avec gestion des incidents, des assets et authentification via AD.",
-                    skills: ["Ubuntu Server", "GLPI", "LAMP", "LDAP/AD", "ITSM"]
+                    skills: ["Ubuntu Server", "GLPI", "LAMP", "LDAP/AD", "ITSM"],
+                    detail: {
+                        gradient: "from-purple-600 to-purple-500",
+                        icon: "fa-solid fa-server",
+                        type: "Projet Formation",
+                        desc: "Déploiement d'une solution ITSM open-source GLPI sur Ubuntu Server avec stack LAMP et authentification LDAP.",
+                        intro: "Dans le cadre de la formation BTS SIO SISR, mise en place d'un serveur GLPI complet sur Ubuntu Server 22.04. L'objectif est de maîtriser le déploiement d'un outil ITSM open-source — de l'installation Linux jusqu'à l'intégration Active Directory.",
+                        accentColor: "#9333ea",
+                        btsSkills: [
+                            "<strong>A3.2.1</strong> — Installation et configuration de services",
+                            "<strong>A3.1.2</strong> — Administration des services réseau",
+                            "<strong>B1.1</strong> — Exploitation des ressources informatiques"
+                        ],
+                        sections: [
+                            { num: 1, bgColor: "bg-purple-600", title: "Installation Ubuntu Server & stack LAMP",
+                              html: "Déploiement d'<strong>Ubuntu Server 22.04 LTS</strong> en machine virtuelle. Installation du stack <code>LAMP</code> : <strong>Apache2</strong> (serveur web), <strong>MariaDB 10.x</strong> (base de données), <strong>PHP 8.1</strong> avec toutes les extensions requises (<code>php8.1-ldap</code>, <code>php8.1-curl</code>, <code>php8.1-xml</code>, <code>php8.1-mysql</code>…). Sécurisation MariaDB via <code>mysql_secure_installation</code>.",
+                              code: `<p class="text-emerald-400">sudo apt install apache2 mariadb-server php8.1 -y</p><p class="text-emerald-400">sudo apt install php8.1-ldap php8.1-curl php8.1-xml php8.1-mysql php8.1-mbstring -y</p><p class="text-slate-400 mt-1">// Créer la base GLPI</p><p class="text-sky-300">CREATE DATABASE glpi; GRANT ALL ON glpi.* TO 'glpi'@'localhost';</p>`, codeLabel: "Installation LAMP" },
+                            { num: 2, bgColor: "bg-blue-600", title: "Déploiement GLPI 10.x",
+                              html: "Téléchargement de l'archive <strong>GLPI 10.x</strong>, extraction dans <code>/var/www/html/glpi</code>. Configuration des droits Apache et des permissions fichiers. Lancement de l'<strong>assistant d'installation web</strong> : connexion à la base MariaDB, création des tables, compte administrateur initial. Activation du <code>cron GLPI</code> pour les tâches automatiques (actions automatiques, alertes, purges)." },
+                            { num: 3, bgColor: "bg-purple-600", title: "Intégration LDAP / Active Directory",
+                              html: "Configuration de l'<strong>annuaire LDAP</strong> dans GLPI pour connecter le serveur Active Directory : adresse du contrôleur de domaine, port 389, identifiants de service en lecture seule. Paramétrage des filtres de recherche par <code>OU</code> et mapping des attributs AD (sAMAccountName → login, mail, CN → nom complet). Les utilisateurs du domaine peuvent désormais se connecter avec leurs identifiants Windows." },
+                            { num: 4, bgColor: "bg-slate-600", title: "Configuration ITSM (tickets, assets, SLA)",
+                              html: "Paramétrage des <strong>profils utilisateurs</strong> (Self-Service, Technician, Admin). Création des <strong>catégories de tickets</strong> (Réseau, Matériel, Logiciel, Sécurité, Accès). Définition des <strong>SLA</strong> par priorité (P1: 1h, P2: 4h, P3: 8h). Activation de l'<strong>inventaire automatique</strong> via agent GLPI. Configuration des <strong>notifications email</strong> pour les changements de statut." }
+                        ],
+                        stats: [{ val: "LAMP", lbl: "Stack Linux" }, { val: "LDAP/AD", lbl: "Auth centralisée" }, { val: "ITSM", lbl: "Gestion incidents" }],
+                        conclusion: "Ce projet m'a donné une maîtrise complète d'un outil ITSM open-source. La même logique (tickets, SLA, inventaire) se retrouve dans les outils professionnels FreshService et Atera que j'utilise quotidiennement en alternance chez Exantis."
+                    }
                 },
                 {
                     id: 102,
@@ -1126,7 +1819,35 @@
                     icon: "fa-solid fa-users text-blue-500",
                     desc: "<strong>Situation :</strong> Mise en place d'un environnement domaine Windows complet en formation.<br><br><strong>Procédure :</strong> Installation de <strong>Windows Server 2022</strong>, promotion en contrôleur de domaine (<code>Active Directory DS</code>). Configuration des rôles <code>DNS</code> et <code>DHCP</code>. Création de l'arborescence d'<code>OU</code> (Administratifs, Elèves, Professeurs, Ordinateurs). Jonction de postes Windows 10/11. Déploiement de <code>GPO</code> pour restrictions, fond d'écran et distribution logicielle.<br><br><strong>Résultat :</strong> Domaine fonctionnel avec 10+ postes joints, GPO appliquées, arborescence AD structurée.",
                     images: ["AD/arborescence%20des%20groupes.png", "AD/Modification%20user.png"],
-                    skills: ["Windows Server 2022", "Active Directory", "GPO", "DNS", "DHCP"]
+                    skills: ["Windows Server 2022", "Active Directory", "GPO", "DNS", "DHCP"],
+                    detail: {
+                        gradient: "from-blue-700 to-blue-600",
+                        icon: "fa-solid fa-users",
+                        type: "Projet Formation",
+                        desc: "Mise en place d'un domaine Windows complet : AD DS, DNS, DHCP, OU, GPO et jonction de postes Windows 11.",
+                        intro: "Déploiement from scratch d'un environnement Active Directory en formation BTS SIO. L'objectif est de construire un domaine Windows complet avec contrôleur de domaine, arborescence d'OU, stratégies de groupe et postes clients — du serveur bare metal jusqu'à la connexion des utilisateurs.",
+                        accentColor: "#1d4ed8",
+                        btsSkills: [
+                            "<strong>A3.2.1</strong> — Installation et configuration de serveurs Windows",
+                            "<strong>A3.1.1</strong> — Proposition d'architecture d'annuaire",
+                            "<strong>B3.1</strong> — Sécurisation via GPO et restrictions"
+                        ],
+                        sections: [
+                            { num: 1, bgColor: "bg-blue-700", title: "Installation Windows Server 2022 & rôles",
+                              html: "Installation de <strong>Windows Server 2022</strong> avec interface graphique. Attribution d'une IP fixe, nom de machine, groupe de travail. Ajout des rôles via le <em>Gestionnaire de serveur</em> : <strong>Active Directory Domain Services</strong> (AD DS), <strong>DNS Server</strong> et <strong>DHCP Server</strong>. Promotion en contrôleur de domaine : création du domaine <code>lab.local</code>, partition de la forêt AD.",
+                              images: ["AD/Nom%20User.png"] },
+                            { num: 2, bgColor: "bg-blue-600", title: "Arborescence OU & comptes",
+                              html: "Création de l'arborescence d'<strong>Unités d'Organisation</strong> dans la console <code>dsa.msc</code> : <em>Utilisateurs</em> (Élèves, Professeurs, Administratifs), <em>Ordinateurs</em> (Postes, Serveurs), <em>Groupes</em>. Création des comptes utilisateurs avec convention de nommage. Groupes de sécurité par OU pour la gestion des droits. <strong>Configuration DHCP</strong> : étendues par sous-réseau, options (passerelle, DNS).",
+                              images: ["AD/arborescence%20des%20groupes.png"] },
+                            { num: 3, bgColor: "bg-blue-700", title: "Jonction de postes & gestion comptes",
+                              html: "Jonction de postes <strong>Windows 10/11</strong> au domaine via <em>Propriétés système → Domaine</em>. Connexion avec les comptes domaine. Gestion des comptes : <strong>création</strong>, <strong>modification</strong> des propriétés (email, téléphone, département), <strong>désactivation</strong> et <strong>suppression</strong> sécurisée dans la bonne OU.",
+                              images: ["AD/Modification%20user.png", "AD/D%C3%A9sactivation%20des%20comptes.png"] },
+                            { num: 4, bgColor: "bg-slate-600", title: "Déploiement GPO",
+                              html: "Création de <strong>Stratégies de Groupe</strong> (GPO) via la console GPMC : fond d'écran imposé, désactivation du panneau de configuration, mappage de lecteurs réseau par OU, déploiement de logiciels via MSI. Liaison des GPO aux OU cibles. Test de l'application avec <code>gpupdate /force</code> et <code>gpresult /r</code> sur les postes clients." }
+                        ],
+                        stats: [{ val: "10+ postes", lbl: "Joints au domaine" }, { val: "4 OU", lbl: "Arborescence AD" }, { val: "GPO", lbl: "Stratégies déployées" }],
+                        conclusion: "Ce TP est fondamental pour la suite de l'alternance : la même architecture (AD DS, DNS, DHCP, GPO) est présente chez tous les clients Exantis. J'ai pu mettre en pratique immédiatement en entreprise ce qui a été vu en formation."
+                    }
                 },
                 {
                     id: 103,
@@ -1135,7 +1856,32 @@
                     period: "10/03/2025 – 20/03/2025",
                     icon: "fa-solid fa-box text-orange-500",
                     desc: "<strong>Situation :</strong> Apprentissage de la virtualisation type 2 pour créer des environnements de test isolés.<br><br><strong>Procédure :</strong> Installation d'<strong>Oracle VM VirtualBox</strong>. Création de VM Windows 10 et Ubuntu. Paramétrage des adaptateurs réseau : <code>NAT</code> (accès internet), réseau interne (isolation), pont (accès LAN). Allocation de ressources <code>vCPU</code>/RAM adaptées. Gestion des snapshots et des disques virtuels <code>VDI</code>. Configuration des dossiers partagés hôte/invité.<br><br><strong>Résultat :</strong> Maîtrise de la création et gestion de VM, utilisées pour tous les labs suivants.",
-                    skills: ["VirtualBox", "Virtualisation", "Réseau NAT", "Snapshots", "Linux"]
+                    skills: ["VirtualBox", "Virtualisation", "Réseau NAT", "Snapshots", "Linux"],
+                    detail: {
+                        gradient: "from-orange-600 to-amber-500",
+                        icon: "fa-solid fa-box",
+                        type: "Projet Formation",
+                        desc: "Maîtrise de la virtualisation type 2 avec Oracle VirtualBox : création de VMs, réseaux, snapshots et dossiers partagés.",
+                        intro: "Formation à la virtualisation de type 2 avec Oracle VM VirtualBox. L'objectif est de créer des environnements de test isolés et reproductibles — Windows 10, Ubuntu Server — pour réaliser tous les TP suivants sans risque pour la machine hôte.",
+                        accentColor: "#ea580c",
+                        btsSkills: [
+                            "<strong>A3.2.1</strong> — Création d'environnements virtualisés",
+                            "<strong>A1.2.3</strong> — Tests et validation en environnement de test"
+                        ],
+                        sections: [
+                            { num: 1, bgColor: "bg-orange-600", title: "Installation & premières VMs",
+                              html: "Téléchargement et installation d'<strong>Oracle VM VirtualBox 7.x</strong> avec le <em>VirtualBox Extension Pack</em> (USB 3.0, RDP, disk encryption). Création d'une VM <strong>Windows 10 Pro</strong> : 2 vCPU, 4 Go RAM, 50 Go disque VDI dynamique. Création d'une VM <strong>Ubuntu Server 22.04</strong> : 2 vCPU, 2 Go RAM, 20 Go disque. Installation des <strong>Guest Additions</strong> pour le partage presse-papiers et le redimensionnement dynamique de l'écran.",
+                              code: `<p class="text-slate-400">// Types de stockage VirtualBox</p><p class="text-emerald-400">VDI → format natif VirtualBox (compact, portable)</p><p class="text-emerald-400">VHD → compatible Hyper-V</p><p class="text-emerald-400">VMDK → compatible VMware</p>`, codeLabel: "Formats de disque" },
+                            { num: 2, bgColor: "bg-amber-500", title: "Configuration des adaptateurs réseau",
+                              html: "Paramétrage des <strong>modes réseau</strong> selon le besoin : <code>NAT</code> (accès Internet via l'hôte, isolation du réseau local), <code>Bridge/Pont</code> (VM visible sur le LAN physique, IP DHCP réelle), <code>Réseau interne</code> (communication VM-VM uniquement, totalement isolé), <code>Host-only</code> (communication hôte-VM uniquement). Combinaison de 2 cartes réseau pour accès Internet + communication inter-VMs." },
+                            { num: 3, bgColor: "bg-orange-600", title: "Snapshots & gestion du cycle de vie",
+                              html: "Utilisation intensive des <strong>snapshots</strong> (instantanés) : prise d'un snapshot avant chaque TP pour pouvoir revenir à l'état précédent en cas d'erreur. Arborescence de snapshots : <em>Base installée → AD promu → GLPI installé</em>. Restauration en 1 clic. <strong>Clonage de VM</strong> (clone lié vs clone complet) pour dupliquer un environnement de test. Export/import au format <code>OVA</code> pour la portabilité." },
+                            { num: 4, bgColor: "bg-slate-600", title: "Dossiers partagés & intégration hôte",
+                              html: "Configuration des <strong>dossiers partagés</strong> hôte/invité avec montage automatique au démarrage. Accès aux fichiers de l'hôte depuis la VM (partage de scripts, ISOs, fichiers de config). Paramétrage du <strong>presse-papiers bidirectionnel</strong> et du <strong>drag & drop</strong> entre hôte et VM. Allocation dynamique des ressources selon la charge." }
+                        ],
+                        stats: [{ val: "2 VMs", lbl: "Win10 + Ubuntu" }, { val: "4 modes", lbl: "Réseau" }, { val: "Snapshots", lbl: "Retour arrière" }],
+                        conclusion: "VirtualBox est devenu mon outil principal de lab tout au long de la formation BTS SIO. Tous les projets suivants (GLPI, AD, ITWAY) ont été réalisés dans des VMs. Cette base est indispensable pour travailler de façon professionnelle et sans risque."
+                    }
                 },
                 {
                     id: 104,
@@ -1144,16 +1890,79 @@
                     period: "01/10/2024 – 01/05/2026",
                     icon: "fa-solid fa-globe text-indigo-500",
                     desc: "<strong>Situation :</strong> Création d'un portfolio numérique pour présenter mes compétences à l'épreuve E4 du BTS SIO.<br><br><strong>Procédure :</strong> Conception de la structure HTML5 sémantique. Intégration du framework <strong>Tailwind CSS</strong> (CDN) pour le responsive design. Développement JavaScript vanilla : navigation par onglets, filtres dynamiques, modal, génération de cartes depuis des tableaux de données. Intégration de flux <code>RSS</code> (CERT-FR, IT-Connect) via l'API <code>rss2json</code>.<br><br><strong>Résultat :</strong> Portfolio complet, responsive, présenté lors de l'épreuve E4.",
-                    skills: ["HTML/CSS", "Tailwind CSS", "JavaScript", "GitHub Pages", "RSS API"]
+                    skills: ["HTML/CSS", "Tailwind CSS", "JavaScript", "GitHub Pages", "RSS API"],
+                    detail: {
+                        gradient: "from-indigo-600 to-violet-500",
+                        icon: "fa-solid fa-globe",
+                        type: "Projet Formation – E4 BTS SIO",
+                        context: "Création d'un portfolio numérique pour présenter mes compétences lors de l'épreuve E4 du BTS SIO. Contrainte : site <strong>100% statique</strong>, hébergeable sur GitHub Pages, sans back-end.",
+                        ficheTitle: "Fiche Technique",
+                        fiche: [
+                            { label: "Technologies", value: "HTML5, Tailwind CSS, JavaScript ES6+" },
+                            { label: "Hébergement", value: "GitHub Pages (gratuit)" },
+                            { label: "API externe", value: "rss2json.com (flux CERT-FR)" },
+                            { label: "Framework CSS", value: "Tailwind CDN (aucune dépendance npm)" },
+                            { label: "Compétences BTS", value: "B1.3, B1.6, B3.2" }
+                        ],
+                        skills: [
+                            { code: "B1.3", label: "Intégration web responsive (HTML5/CSS3)" },
+                            { code: "B1.6", label: "JavaScript côté client (DOM, événements)" },
+                            { code: "B3.2", label: "Publication et versioning GitHub Pages" }
+                        ],
+                        sections: [
+                            {
+                                title: "Structure HTML & Navigation",
+                                text: "Le portfolio est une <strong>Single Page Application</strong> (SPA) en HTML/CSS/JS pur. La navigation entre les sections (Accueil, Projets, Veille, Compétences) est gérée par JavaScript sans rechargement de page : chaque section est un <code>div</code> masqué/affiché via des classes CSS.",
+                                code: `// Navigation SPA — affichage de la section active
+function showSection(id) {
+  document.querySelectorAll('.page-section')
+    .forEach(s => s.classList.add('hidden'));
+  document.getElementById(id)
+    .classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}`
+                            },
+                            {
+                                title: "Design Responsive avec Tailwind CSS",
+                                text: "Tailwind CSS (chargé via CDN) fournit toutes les classes utilitaires nécessaires. Le layout s'adapte automatiquement de mobile (<code>col-span-1</code>) à desktop (<code>lg:col-span-3</code>). Aucune feuille CSS personnalisée : tout est inline via des classes Tailwind."
+                            },
+                            {
+                                title: "Génération Dynamique des Cartes Projets",
+                                text: "Les projets sont définis dans un <strong>tableau JavaScript</strong>. La fonction <code>filterMinorProjects()</code> parcourt ce tableau, applique les filtres actifs (catégorie, recherche texte) et génère dynamiquement le HTML des cartes. Cette approche évite la répétition de HTML et facilite l'ajout de nouveaux projets.",
+                                code: `// Génération des cartes depuis les données JS
+function renderCard(p) {
+  return \`<div class="project-card rounded-2xl p-6 ...">
+    <i class="\${p.icon}"></i>
+    <h3>\${p.title}</h3>
+    <p>\${p.period}</p>
+    \${p.skills.map(s =>
+      \`<span class="badge">\${s}</span>\`
+    ).join('')}
+  </div>\`;
+}`
+                            },
+                            {
+                                title: "Intégration Flux RSS — Veille Technologique",
+                                text: "La section Veille intègre un carrousel d'articles de sécurité provenant de sources comme CERT-FR et IT-Connect. Les articles sont chargés dynamiquement via l'API <strong>rss2json.com</strong> qui convertit les flux RSS en JSON exploitable côté client. En cas d'échec de l'API, des articles statiques de secours s'affichent automatiquement."
+                            }
+                        ],
+                        stats: [
+                            { val: "1 fichier", lbl: "HTML monolithique" },
+                            { val: "Tailwind", lbl: "CSS framework" },
+                            { val: "GitHub Pages", lbl: "Déploiement" }
+                        ],
+                        conclusion: "Ce portfolio démontre la maîtrise du développement front-end sans dépendances lourdes : HTML sémantique, CSS utilitaire Tailwind, JavaScript vanilla pour l'interactivité et l'intégration d'API tierces. Présenté avec succès lors de l'épreuve E4 du BTS SIO."
+                    }
                 },
                 {
                     id: 105,
-                    title: "Itway – Plateforme de Formation",
+                    title: "ITWAY – Conception Infrastructure Multi-Sites",
                     cat: "Formation", type: "Formation",
                     period: "01/10/2025 – 01/05/2026",
-                    icon: "fa-solid fa-graduation-cap text-teal-500",
-                    desc: "<strong>Situation :</strong> Formation certifiante complémentaire au BTS SIO via plateforme e-learning.<br><br><strong>Contenu :</strong> Modules d'administration système et réseaux. Protocoles fondamentaux : <code>TCP/IP</code>, <code>DNS</code>, <code>DHCP</code>, <code>VLAN</code>. Sécurité des accès (ACL, pare-feu, VPN). Administration <strong>Windows Server</strong> et Linux. Labs pratiques en environnement simulé.<br><br><strong>Résultat :</strong> Validation de compétences certifiantes complémentaires aux projets réalisés en entreprise.",
-                    skills: ["Certification", "Réseaux TCP/IP", "Sécurité", "Windows Server", "Linux"]
+                    icon: "fa-solid fa-building-server text-teal-500",
+                    detailId: 3,
+                    desc: "<strong>Situation :</strong> Projet de conception d'infrastructure complète pour l'entreprise fictive <em>ITW</em> (2 sites : Marseille 80 emp. + Lille 30 emp.), réalisé en binôme dans le cadre de l'épreuve BTS SIO.<br><br><strong>Architecture réseau :</strong> Segmentation en <strong>8 VLANs</strong> par département : Serveurs (<code>10.0.10.0/28</code>), IT, Logiciel, Support, Administratif, Commercial, WiFi Interne/Guest, DMZ (<code>172.20.90.0/29</code>). Interconnexion inter-sites via <strong>tunnel VPN WireGuard</strong> (<code>IPSec</code>). Pare-feu <strong>pfSense</strong> sur chaque site.<br><br><strong>Virtualisation & Serveurs :</strong> Hyperviseur <strong>Proxmox VE</strong> avec stockage <code>RAID1</code> (2×600 Go, Proxmox/backups) et <code>RAID5</code> (4×1.2 To, VMs). Serveurs déployés : <strong>AD Windows Server 2022</strong>, GLPI (ticketing), <strong>Wazuh</strong> (SIEM/XDR), Centreon (supervision), Nextcloud, MySQL, serveur mail, RDS.<br><br><strong>Sécurité & Annuaire :</strong> Active Directory multi-sites (<code>SRVM-AD</code> + <code>SRVL-AD</code>), authentification WiFi via <code>NPS/RADIUS</code>, déploiement <code>GPO</code> par département, conformité <strong>ISO 27001</strong> et RGPD.<br><br><strong>Résultat :</strong> Documentation technique complète (schéma réseau, plan d'adressage, procédures) validée dans le cadre de l'épreuve.",
+                    skills: ["Proxmox VE", "pfSense", "WireGuard VPN", "Active Directory", "Wazuh SIEM", "VLANs", "NPS/RADIUS", "GPO"]
                 },
                 // ── EXANTIS — 1ÈRE ANNÉE ──────────────────────────────────
                 {
@@ -1164,7 +1973,52 @@
                     icon: "fa-solid fa-hard-drive text-slate-500",
                     desc: "<strong>Situation :</strong> Reconditionnement et déploiement de postes clients pour plusieurs établissements.<br><br><strong>Procédure :</strong> Réception et inventaire des machines dans l'atelier Exantis. Remplacement de composants : <code>HDD → SSD NVMe</code>, ajout de <code>RAM</code> DDR4. Installation propre de <strong>Windows 11 Pro</strong>. Jonction au domaine <code>Active Directory</code> client. Paramétrage <code>TCP/IP</code>, mapping imprimantes réseau, installation logiciels métier. Livraison et mise en service sur site.<br><br><strong>Résultat :</strong> Plusieurs dizaines de postes reconditionnés et déployés chez les clients Exantis.",
                     images: ["Atelier%20et%20prepa%20poste/Atelier.png", "Atelier%20et%20prepa%20poste/Bureau.png"],
-                    skills: ["Hardware", "Windows 11", "Active Directory", "TCP/IP", "Déploiement"]
+                    skills: ["Hardware", "Windows 11", "Active Directory", "TCP/IP", "Déploiement"],
+                    detail: {
+                        gradient: "from-slate-600 to-slate-500",
+                        icon: "fa-solid fa-hard-drive",
+                        type: "Alternance Exantis – 1ère Année",
+                        context: "Dans le cadre de l'alternance chez Exantis, réception, préparation et déploiement de postes clients pour plusieurs établissements scolaires et PME. L'atelier sert de point central pour toutes les opérations matérielles.",
+                        ficheTitle: "Fiche Technique",
+                        fiche: [
+                            { label: "Matériel traité", value: "PC portables & fixes, stations de travail" },
+                            { label: "Upgrade type", value: "HDD → SSD NVMe, ajout RAM DDR4" },
+                            { label: "OS déployé", value: "Windows 11 Pro (image maîtresse)" },
+                            { label: "Intégration", value: "Jonction domaine Active Directory" },
+                            { label: "Compétences BTS", value: "A1.1.1, A1.2.1, A3.1.1" }
+                        ],
+                        skills: [
+                            { code: "A1.1.1", label: "Analyse et préparation des postes à déployer" },
+                            { code: "A1.2.1", label: "Installation composants matériels (SSD, RAM)" },
+                            { code: "A3.1.1", label: "Déploiement OS et jonction au domaine AD" }
+                        ],
+                        sections: [
+                            {
+                                title: "Atelier — Réception & Diagnostic",
+                                text: "Chaque lot de machines arrive à l'atelier Exantis. Les postes sont inventoriés, diagnostiqués (test mémoire, SMART des disques, état de la batterie pour les portables) et triés selon leur état. Les défaillances matérielles sont identifiées avant toute intervention.",
+                                images: ["Atelier%20et%20prepa%20poste/Atelier.png"]
+                            },
+                            {
+                                title: "Upgrade Matériel",
+                                text: "Remplacement systématique des <strong>HDD mécaniques par des SSD NVMe</strong> pour améliorer les performances (temps de démarrage réduit de ~60s à ~10s). Ajout de barrettes <strong>RAM DDR4</strong> pour atteindre 8 ou 16 Go selon les besoins. Nettoyage des ventilateurs et renouvellement de la pâte thermique sur les processeurs."
+                            },
+                            {
+                                title: "Déploiement Windows 11 & Jonction AD",
+                                text: "Installation de <strong>Windows 11 Pro</strong> via image ISO ou clé USB bootable. Configuration BIOS : démarrage UEFI, Secure Boot activé, TPM 2.0 vérifié. Après installation : jonction au domaine <strong>Active Directory</strong> client, mapping des lecteurs réseau, installation des logiciels métier (suite Office, logiciels spécifiques client), configuration des imprimantes réseau TCP/IP.",
+                                images: ["Atelier%20et%20prepa%20poste/Bureau.png"]
+                            },
+                            {
+                                title: "Supervision PRTG",
+                                text: "Une fois les postes déployés, suivi de la disponibilité réseau via <strong>PRTG Network Monitor</strong>. Les équipements clients (serveurs, switches, imprimantes) sont supervisés. Création d'alertes email en cas de panne. Outil utilisé en complément d'Atera pour les clients ne disposant pas de RMM."
+                            }
+                        ],
+                        stats: [
+                            { val: "30+", lbl: "Postes reconditionnés" },
+                            { val: "SSD NVMe", lbl: "Upgrade systématique" },
+                            { val: "Multi-sites", lbl: "Déploiements" }
+                        ],
+                        conclusion: "Le reconditionnement de postes est une activité récurrente en ESN. Cette expérience a permis de maîtriser l'ensemble de la chaîne : diagnostic matériel, upgrade composants, déploiement OS, intégration AD — en conditions réelles chez des clients d'Exantis."
+                    }
                 },
                 {
                     id: 107,
@@ -1174,7 +2028,54 @@
                     icon: "fa-solid fa-headset text-amber-500",
                     desc: "<strong>Situation :</strong> Gestion quotidienne des incidents clients via <strong>FreshService</strong> (ITSM) et <strong>Atera</strong> (RMM).<br><br><strong>Procédure :</strong> Réception et qualification des tickets entrants (téléphone, email, portail). Diagnostic à distance via <strong>Atera RMM</strong> : consultation des informations poste (IP, OS, RAM, disques, utilisateur connecté). Prise en main distante (<code>AnyDesk</code>, <code>Splashtop</code>). Résolution N1 ou escalade N2. Documentation de la solution et clôture ticket. Respect des <code>SLA</code> contractuels.<br><br><strong>Résultat :</strong> Traitement de plusieurs centaines de tickets sur la durée de l'alternance, multi-clients.",
                     images: ["Fresh%20Service/Ticket%20general.png", "Atera/Info%20poste.png"],
-                    skills: ["FreshService", "Atera RMM", "Support N1/N2", "AnyDesk/Splashtop", "SLA"]
+                    skills: ["FreshService", "Atera RMM", "Support N1/N2", "AnyDesk/Splashtop", "SLA"],
+                    detail: {
+                        gradient: "from-amber-500 to-orange-500",
+                        icon: "fa-solid fa-headset",
+                        type: "Alternance Exantis – 1ère & 2ème Année",
+                        context: "Gestion quotidienne du support informatique multi-clients chez Exantis via deux plateformes ITSM : <strong>FreshService</strong> pour la gestion des tickets et <strong>Atera</strong> pour la télégestion des parcs clients.",
+                        ficheTitle: "Fiche Technique",
+                        fiche: [
+                            { label: "ITSM Ticketing", value: "FreshService (Freshworks)" },
+                            { label: "RMM / Télégestion", value: "Atera (agents déployés sur parc)" },
+                            { label: "Prise en main distante", value: "AnyDesk, Splashtop" },
+                            { label: "Périmètre", value: "Support N1/N2, multi-clients" },
+                            { label: "Compétences BTS", value: "A2.2.1, A2.3.1, B3.1" }
+                        ],
+                        skills: [
+                            { code: "A2.2.1", label: "Qualification et traitement des incidents N1/N2" },
+                            { code: "A2.3.1", label: "Gestion et suivi des tickets (SLA)" },
+                            { code: "B3.1", label: "Documentation des solutions en base de connaissances" }
+                        ],
+                        sections: [
+                            {
+                                title: "Gestion des Tickets FreshService",
+                                text: "<strong>FreshService</strong> est l'outil ITSM central d'Exantis. Chaque demande entrante (email, téléphone, portail client) génère un ticket automatiquement. La qualification consiste à catégoriser l'incident (matériel, logiciel, réseau, accès), attribuer la priorité (P1→P4) et respecter les <strong>SLA</strong> contractuels. Les tickets résolus sont documentés pour alimenter la base de connaissances.",
+                                images: ["Fresh%20Service/Ticket%20general.png"]
+                            },
+                            {
+                                title: "Détail d'un Ticket — Cycle de Vie",
+                                text: "Chaque ticket suit un cycle complet : <strong>Ouverture → En cours → En attente client → Résolu → Fermé</strong>. Le technicien documente chaque action effectuée dans les notes privées (internes) et communique avec le client via les réponses publiques. Les métriques SLA (temps de première réponse, temps de résolution) sont suivies en temps réel.",
+                                images: ["Fresh%20Service/Infos%20ticket.png"]
+                            },
+                            {
+                                title: "Diagnostic Distant via Atera RMM",
+                                text: "<strong>Atera</strong> permet de consulter l'état complet d'un poste client avant même de le contacter : IP, OS, version Windows, RAM utilisée, espace disque, logiciels installés, utilisateur connecté. La prise en main distante via <strong>AnyDesk</strong> ou <strong>Splashtop</strong> s'effectue en un clic depuis la console Atera, sans action préalable de l'utilisateur.",
+                                images: ["Atera/Info%20poste.png"]
+                            },
+                            {
+                                title: "Clients Multi-Sites — Console Atera",
+                                text: "La console Atera regroupe <strong>tous les clients</strong> d'Exantis en une vue unifiée. Chaque client dispose de son propre espace avec ses agents, ses alertes et ses scripts. Cette multi-tenancy permet de passer rapidement d'un client à l'autre sans reconnexion. Les alertes disques critiques (<70% libre), serveurs hors ligne et anomalies réseau remontent automatiquement.",
+                                images: ["Atera/Client.png"]
+                            }
+                        ],
+                        stats: [
+                            { val: "100+", lbl: "Tickets traités" },
+                            { val: "Multi-clients", lbl: "Périmètre support" },
+                            { val: "SLA", lbl: "Respect contractuel" }
+                        ],
+                        conclusion: "Le support N1/N2 multi-clients est le cœur du métier en ESN. Cette expérience quotidienne avec FreshService et Atera a développé l'autonomie, la rigueur de documentation et la capacité à gérer plusieurs incidents simultanément tout en respectant les engagements contractuels."
+                    }
                 },
                 {
                     id: 108,
@@ -1184,7 +2085,54 @@
                     icon: "fa-solid fa-cloud text-blue-400",
                     desc: "<strong>Situation :</strong> Administration des identités et licences pour les clients multi-tenants d'Exantis.<br><br><strong>Procédure :</strong> Création/modification/désactivation de comptes <code>Active Directory</code> on-premise. Gestion des <code>OU</code> (unités d'organisation) et groupes de sécurité. Synchronisation <code>Azure AD Connect</code>. Administration des tenants <strong>Microsoft 365</strong> : attribution de licences (<em>Business Standard/Basic</em>), création de boîtes partagées <code>Exchange Online</code>, groupes <code>Teams</code> et <code>SharePoint</code>. Audit des droits et rapport de conformité.<br><br><strong>Résultat :</strong> Gestion autonome de plusieurs tenants M365, arborescences AD structurées pour écoles et PME.",
                     images: ["Office%20365/Attribution%20license.png", "AD/arborescence%20des%20groupes.png"],
-                    skills: ["Microsoft 365", "Azure AD", "Exchange Online", "Active Directory", "Licences"]
+                    skills: ["Microsoft 365", "Azure AD", "Exchange Online", "Active Directory", "Licences"],
+                    detail: {
+                        gradient: "from-blue-500 to-sky-400",
+                        icon: "fa-solid fa-cloud",
+                        type: "Alternance Exantis – 1ère & 2ème Année",
+                        context: "Administration des identités et des accès pour les clients multi-tenants d'Exantis : gestion de l'<strong>Active Directory</strong> on-premise et des tenants <strong>Microsoft 365</strong> en environnement cloud hybride.",
+                        ficheTitle: "Fiche Technique",
+                        fiche: [
+                            { label: "Annuaire on-premise", value: "Active Directory (Windows Server)" },
+                            { label: "Cloud IAM", value: "Azure Active Directory / Entra ID" },
+                            { label: "Synchronisation", value: "Azure AD Connect" },
+                            { label: "Suite cloud", value: "Microsoft 365 (Exchange, Teams, SharePoint)" },
+                            { label: "Compétences BTS", value: "A1.3.1, A2.1.1, A3.2.1" }
+                        ],
+                        skills: [
+                            { code: "A1.3.1", label: "Gestion des comptes et droits Active Directory" },
+                            { code: "A2.1.1", label: "Administration Microsoft 365 & Azure AD" },
+                            { code: "A3.2.1", label: "Gestion des licences et boîtes Exchange Online" }
+                        ],
+                        sections: [
+                            {
+                                title: "Attribution de Licences M365",
+                                text: "Gestion des licences Microsoft 365 depuis le <strong>portail d'administration M365</strong>. Attribution de licences <em>Business Basic</em>, <em>Business Standard</em> ou <em>Apps for Business</em> selon les besoins de chaque utilisateur. Suivi du stock de licences disponibles par tenant. Désactivation des licences lors des départs pour optimiser les coûts.",
+                                images: ["Office%20365/Attribution%20license.png"]
+                            },
+                            {
+                                title: "Gestion des Utilisateurs & Options",
+                                text: "Création, modification et désactivation des comptes utilisateurs depuis l'interface d'administration M365 ou via <strong>PowerShell</strong> pour les opérations en masse. Configuration des options avancées : alias email, délégations de boîte, réinitialisation MFA, gestion des groupes Teams.",
+                                images: ["Office%20365/option%20user.png"]
+                            },
+                            {
+                                title: "Boîtes aux Lettres Partagées Exchange",
+                                text: "Création de <strong>boîtes aux lettres partagées</strong> pour les services communs (contact@, facturation@, support@). Configuration des permissions d'accès par groupe de sécurité. Les utilisateurs accèdent à ces boîtes depuis leur client Outlook sans compte dédié — un gain de licences important pour les PME.",
+                                images: ["Office%20365/Boite%20aux%20lettre%20partager.png"]
+                            },
+                            {
+                                title: "Arborescence AD & Groupes de Sécurité",
+                                text: "Sur les annuaires <strong>Active Directory</strong> on-premise, création et maintenance des <strong>Unités d'Organisation (OU)</strong> par site et département. Gestion des groupes de sécurité pour les droits d'accès aux ressources réseau (dossiers partagés, imprimantes). Synchronisation vers Azure AD via <strong>Azure AD Connect</strong> pour les environnements hybrides.",
+                                images: ["AD/arborescence%20des%20groupes.png"]
+                            }
+                        ],
+                        stats: [
+                            { val: "Multi-tenants", lbl: "Clients M365" },
+                            { val: "Hybride", lbl: "AD + Azure AD" },
+                            { val: "Exchange Online", lbl: "Boîtes partagées" }
+                        ],
+                        conclusion: "La gestion des identités en environnement hybride AD/Azure AD est une compétence clé pour un administrateur système. Cette expérience multi-clients chez Exantis a permis de développer une réelle autonomie sur l'administration M365 et Active Directory dans des contextes variés (PME, écoles, associations)."
+                    }
                 },
                 {
                     id: 109,
@@ -1194,7 +2142,62 @@
                     icon: "fa-solid fa-shield-halved text-indigo-500",
                     desc: "<strong>Situation :</strong> Déploiement et configuration des outils de supervision et sécurité du parc clients Exantis.<br><br><strong>Procédure :</strong> Déploiement de l'agent <strong>Atera</strong> sur les postes via <code>GPO</code> et script <code>PowerShell</code>. Configuration du tableau de bord : alertes disques, disponibilité des serveurs, taux de patching. Création de scripts d'automatisation (infos RAM, <code>Windows Update</code>, nettoyage, sync <code>Azure AD Connect</code>). Déploiement de l'agent <strong>SentinelOne</strong> (EDR/XDR) sur les endpoints — gestion de 330+ machines sur 8 sites clients.<br><br><strong>Résultat :</strong> Parc entièrement supervisé en temps réel, agents EDR actifs sur tous les sites.",
                     images: ["Atera/Dashboard.png", "S1/Capture%20d%27%C3%A9cran%202026-04-16%20111636.png"],
-                    skills: ["Atera RMM", "SentinelOne EDR", "PowerShell", "GPO", "Supervision"]
+                    skills: ["Atera RMM", "SentinelOne EDR", "PowerShell", "GPO", "Supervision"],
+                    detail: {
+                        gradient: "from-indigo-600 to-purple-600",
+                        icon: "fa-solid fa-shield-halved",
+                        type: "Alternance Exantis – 1ère Année",
+                        context: "Déploiement et configuration des outils de supervision (<strong>Atera RMM</strong>) et de sécurité endpoint (<strong>SentinelOne EDR</strong>) sur l'ensemble du parc clients d'Exantis — 330+ machines réparties sur 8 sites.",
+                        ficheTitle: "Fiche Technique",
+                        fiche: [
+                            { label: "RMM", value: "Atera (agents Windows/Mac)" },
+                            { label: "EDR/XDR", value: "SentinelOne Singularity" },
+                            { label: "Déploiement agents", value: "GPO + script PowerShell" },
+                            { label: "Périmètre", value: "330+ endpoints, 8 sites clients" },
+                            { label: "Compétences BTS", value: "A1.4.1, B1.5, B3.1" }
+                        ],
+                        skills: [
+                            { code: "A1.4.1", label: "Déploiement d'agents RMM via GPO/PowerShell" },
+                            { code: "B1.5", label: "Configuration supervision et alertes Atera" },
+                            { code: "B3.1", label: "Sécurisation endpoints avec SentinelOne EDR" }
+                        ],
+                        sections: [
+                            {
+                                title: "Tableau de Bord Atera — Vue d'Ensemble",
+                                text: "Le dashboard Atera centralise l'état de <strong>tous les endpoints clients</strong> en temps réel : disponibilité des agents, alertes disques critiques, statut des patchs Windows, tickets ouverts. Des indicateurs visuels (vert/orange/rouge) permettent d'identifier immédiatement les machines nécessitant une intervention.",
+                                images: ["Atera/Dashboard.png"]
+                            },
+                            {
+                                title: "Scripts d'Automatisation PowerShell",
+                                text: "Création d'une bibliothèque de <strong>scripts PowerShell</strong> dans Atera pour automatiser les tâches récurrentes :",
+                                code: `# Exemple : Synchronisation Azure AD Connect
+Import-Module ADSync
+Start-ADSyncSyncCycle -PolicyType Delta
+Write-Host "Sync AD Connect lancée avec succès"
+
+# Exemple : Rapport RAM disponible
+$os = Get-WmiObject Win32_OperatingSystem
+$ramFree = [math]::Round($os.FreePhysicalMemory/1MB, 2)
+Write-Host "RAM libre : $ramFree Go"`,
+                                images: ["Atera/Script.png"]
+                            },
+                            {
+                                title: "Déploiement SentinelOne EDR",
+                                text: "Déploiement de l'agent <strong>SentinelOne Singularity</strong> (EDR/XDR) sur l'ensemble des endpoints clients. La procédure de déploiement utilise un package MSI distribué via <strong>GPO</strong> ou script Atera. Chaque agent se connecte automatiquement à la console SentinelOne avec le token de site client correspondant.",
+                                images: ["S1/Capture%20d%27%C3%A9cran%202026-04-16%20111636.png"]
+                            },
+                            {
+                                title: "Résultats — Parc Entièrement Supervisé",
+                                text: "À l'issue du déploiement : <strong>100% des machines clientes</strong> équipées de l'agent Atera et de SentinelOne. Les alertes automatiques (disque critique, agent déconnecté, menace détectée) remontent en temps réel. Le taux de patching Windows est suivi et des campagnes de mise à jour planifiées permettent de maintenir le parc à jour."
+                            }
+                        ],
+                        stats: [
+                            { val: "330+", lbl: "Endpoints supervisés" },
+                            { val: "8 sites", lbl: "Clients couverts" },
+                            { val: "SentinelOne", lbl: "EDR actif" }
+                        ],
+                        conclusion: "Ce projet de déploiement de masse a mis en pratique les notions de gestion de parc à grande échelle, d'automatisation PowerShell et de sécurité endpoint. L'expérience SentinelOne EDR est particulièrement valorisée dans le domaine de la cybersécurité, en complément des certifications BTS SIO SISR."
+                    }
                 },
                 // ── EXANTIS — 2ÈME ANNÉE ─────────────────────────────────
                 {
@@ -1205,7 +2208,55 @@
                     icon: "fa-solid fa-arrow-right-arrow-left text-sky-500",
                     desc: "<strong>Situation :</strong> Un client utilise un serveur <code>TSE/RDS</code> (Terminal Server vieillissant) comme poste de travail mutualisé — migration vers Microsoft 365.<br><br><strong>Procédure :</strong> Audit des applications métier installées sur le <code>RDS</code>. Vérification de la compatibilité cloud. Migration des profils utilisateurs et données vers <code>OneDrive</code>/<code>SharePoint</code> via <strong>Remote Desktop Manager</strong>. Attribution des licences <code>M365 Business Standard</code>. Configuration des clients <code>Outlook</code>, <code>Teams</code>. Formation des utilisateurs finaux à la nouvelle interface. Clôture et décommissionnement du TSE.<br><br><strong>Résultat :</strong> Client migré avec succès, suppression du serveur TSE, réduction des coûts d'infrastructure.",
                     images: ["RDM/Capture%20d%27%C3%A9cran%202026-04-15%20141203.png"],
-                    skills: ["RDS/TSE", "Microsoft 365", "OneDrive", "Remote Desktop Manager", "Migration Cloud"]
+                    skills: ["RDS/TSE", "Microsoft 365", "OneDrive", "Remote Desktop Manager", "Migration Cloud"],
+                    detail: {
+                        gradient: "from-sky-600 to-cyan-500",
+                        icon: "fa-solid fa-arrow-right-arrow-left",
+                        type: "Alternance Exantis – 2ème Année",
+                        context: "Un client d'Exantis utilisait un <strong>serveur TSE/RDS</strong> (Windows Server 2016) vieillissant comme environnement de travail mutualisé pour 12 utilisateurs. Projet de migration vers <strong>Microsoft 365</strong> pour supprimer ce point de défaillance unique et réduire les coûts d'infrastructure.",
+                        ficheTitle: "Fiche Technique",
+                        fiche: [
+                            { label: "Source", value: "Windows Server 2016 RDS (TSE)" },
+                            { label: "Cible", value: "Microsoft 365 Business Standard" },
+                            { label: "Outil migration", value: "Remote Desktop Manager (RDM)" },
+                            { label: "Stockage cloud", value: "OneDrive for Business, SharePoint" },
+                            { label: "Compétences BTS", value: "A3.3.1, B2.2, B3.3" }
+                        ],
+                        skills: [
+                            { code: "A3.3.1", label: "Migration de services on-premise vers le cloud" },
+                            { code: "B2.2", label: "Gestion des profils et données utilisateurs" },
+                            { code: "B3.3", label: "Formation utilisateurs finaux aux nouveaux outils" }
+                        ],
+                        sections: [
+                            {
+                                title: "Audit du Serveur TSE Existant",
+                                text: "Analyse complète de l'environnement TSE avant migration : inventaire des <strong>applications installées</strong> (compatibilité cloud ?), cartographie des dossiers utilisateurs (<code>\\serveur\\Users\\</code>), identification des imprimantes réseau mappées, des lecteurs partagés et des accès spécifiques. Le serveur hébergeait 12 sessions simultanées avec profils itinérants."
+                            },
+                            {
+                                title: "Gestion des Connexions avec Remote Desktop Manager",
+                                text: "<strong>Remote Desktop Manager (RDM)</strong> centralise toutes les connexions distantes de l'équipe Exantis : RDP, SSH, VPN, etc. Utilisé ici pour administrer le serveur TSE client, transférer les données et piloter la migration. Chaque connexion est documentée avec ses credentials, son groupe client et ses notes techniques.",
+                                images: ["RDM/Capture%20d%27%C3%A9cran%202026-04-15%20141203.png"]
+                            },
+                            {
+                                title: "Migration des Données vers OneDrive",
+                                text: "Les profils utilisateurs et leurs données (<code>Documents</code>, <code>Bureau</code>, <code>Téléchargements</code>) sont migrés vers <strong>OneDrive for Business</strong>. Configuration de la <strong>redirection de dossiers</strong> via GPO pour que les utilisateurs retrouvent leurs fichiers automatiquement après la migration. Les dossiers partagés sont déplacés vers <strong>SharePoint</strong>.",
+                                code: `# Configuration synchronisation OneDrive via PowerShell
+$tenantId = "xxxxx-xxxx-xxxx-xxxx"
+$oneDriveSetup = "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
+& $oneDriveSetup /configure_business:$tenantId /silentConfig`
+                            },
+                            {
+                                title: "Formation & Décommissionnement TSE",
+                                text: "Accompagnement des 12 utilisateurs lors de la <strong>transition vers Microsoft 365</strong> : prise en main d'Outlook, Teams et OneDrive. Vérification que tous les accès sont opérationnels avant le décommissionnement. Une fois la migration validée par le client, le serveur TSE est éteint et les licences Windows Server libérées."
+                            }
+                        ],
+                        stats: [
+                            { val: "12 users", lbl: "Migrés vers M365" },
+                            { val: "TSE → Cloud", lbl: "Infrastructure" },
+                            { val: "OneDrive", lbl: "Données migrées" }
+                        ],
+                        conclusion: "La migration TSE → M365 est un projet de modernisation infrastructure complet : audit, planification, migration de données, configuration cloud et formation utilisateurs. Ce type de mission, très courant en ESN, démontre la capacité à gérer un projet de bout en bout avec impact direct sur le client."
+                    }
                 },
                 {
                     id: 111,
@@ -1215,9 +2266,36 @@
                     icon: "fa-solid fa-school text-orange-500",
                     desc: "<strong>Situation :</strong> Interventions hebdomadaires en régie sur les établissements scolaires et PME clients d'Exantis (plusieurs sites, noms confidentiels).<br><br><strong>Procédure :</strong> Réception des tickets <strong>FreshService</strong> catégorie <em>Régie</em>. Connexion à distance via <code>RDP</code> pour diagnostic préalable. Déplacement sur site si nécessaire (caméras, imprimantes, réseau, postes). Interventions : brassage réseau, remplacement matériel, reconfiguration poste, intégration domaine <code>AD</code>, mise en place <code>Moodle</code>, assistance enseignants. Clôture des tickets dans FreshService avec compte-rendu.<br><br><strong>Résultat :</strong> Maintien opérationnel de plusieurs parcs informatiques, relation de confiance établie avec les équipes utilisateurs.",
                     images: ["Fresh%20Service/Ticket%20Regie.png", "Fresh%20Service/Exemple%20rouby.png"],
-                    skills: ["Régie", "FreshService", "RDP", "Support Proximité", "Active Directory"]
+                    skills: ["Régie", "FreshService", "RDP", "Support Proximité", "Active Directory"],
+                    detail: {
+                        gradient: "from-orange-600 to-amber-500",
+                        icon: "fa-solid fa-school",
+                        type: "Alternance Exantis",
+                        desc: "Interventions hebdomadaires chez les établissements scolaires et PME clients d'Exantis.",
+                        intro: "Chaque semaine, je prends en charge les interventions de régie informatique chez plusieurs établissements scolaires (lycées, collèges) et PME clients d'Exantis. Les tickets arrivent via FreshService et peuvent nécessiter une prise en main à distance ou un déplacement sur site.",
+                        accentColor: "#ea580c",
+                        client: "Établissements scolaires & PME",
+                        btsSkills: [
+                            "<strong>A2.2.1</strong> — Assistance et support aux utilisateurs",
+                            "<strong>A2.1.1</strong> — Gestion des incidents et des demandes",
+                            "<strong>A3.3.1</strong> — Mise en service des équipements"
+                        ],
+                        sections: [
+                            { num: 1, bgColor: "bg-orange-600", title: "Contexte & Organisation de la régie",
+                              html: "La régie est un mode d'intervention hebdomadaire : Exantis assure une <strong>présence récurrente</strong> sur site pour traiter l'ensemble des problèmes informatiques. Les tickets sont catégorisés <em>Régie</em> dans FreshService. Le technicien arrive, consulte les tickets ouverts, diagnostique à distance ou intervient physiquement." },
+                            { num: 2, bgColor: "bg-amber-600", title: "Types d'interventions réalisées",
+                              html: "<strong>Réseau :</strong> brassage RJ45, reconfiguration switches, test de connectivité. <strong>Matériel :</strong> remplacement disques, RAM, écrans, claviers. <strong>Système :</strong> reconfiguration poste, réintégration domaine AD, réinitialisation profil. <strong>Applications :</strong> mise en place <code>Moodle</code> (ENT scolaire), configuration <code>Active Directory</code> pour les enseignants. <strong>Assistance :</strong> formation utilisateurs, résolution problèmes imprimantes réseau.",
+                              images: ["Fresh%20Service/Ticket%20Regie.png"] },
+                            { num: 3, bgColor: "bg-orange-600", title: "Gestion des tickets FreshService",
+                              html: "Chaque intervention est documentée dans <strong>FreshService</strong> : description du problème, actions réalisées, temps passé, statut. Les tickets <em>Régie</em> ont un <strong>SLA spécifique</strong> lié à la convention de régie. Un compte-rendu hebdomadaire est envoyé au client avec le récapitulatif des interventions.",
+                              images: ["Fresh%20Service/Exemple%20rouby.png"] }
+                        ],
+                        stats: [{ val: "Hebdo", lbl: "Fréquence" }, { val: "Multi-sites", lbl: "Établissements" }, { val: "FreshService", lbl: "Ticketing" }],
+                        conclusion: "La régie m'a appris à gérer mon temps de façon autonome, à prioriser les interventions et à documenter mes actions. C'est une mission qui développe la relation client et la polyvalence technique."
+                    }
                 }
             ];
+            window._minorProjects = minorProjects;
 
             const container = document.getElementById('minor-projects-container');
             container.innerHTML = '';
@@ -1230,8 +2308,11 @@
                 const dataStr = JSON.stringify(p).replace(/"/g, '&quot;');
                 const badgeClass = p.cat === 'Exantis' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700';
 
+                const onclickStr = p.detailId
+                    ? `showProjectDetail(${p.detailId})`
+                    : `showMinorProject(${p.id})`;
                 div.innerHTML = `
-                    <div onclick='openModal(${JSON.stringify(p).replace(/'/g, "&#39;")})' class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group h-full flex flex-col">
+                    <div onclick='${onclickStr}' class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group h-full flex flex-col">
                         <div class="flex justify-between items-start mb-3">
                             <div class="p-2 bg-slate-50 rounded-lg group-hover:bg-blue-50 transition-colors"><i class="${p.icon}"></i></div>
                             <span class="text-[9px] font-bold uppercase tracking-wider ${badgeClass} px-2 py-1 rounded-full">${p.cat}</span>
@@ -1303,6 +2384,87 @@
             container.innerHTML = htmlContent || '<p class="col-span-3 text-center text-red-500 font-medium">Impossible de charger les flux pour le moment.</p>';
             container.dataset.loaded = "true";
         }
+
+        // --- CARROUSEL ARTICLES INFINI (auto-play 6s, 1 carte à la fois) ---
+        (function() {
+            const CARD_W = 340; // 320px carte + 20px gap
+            const SPEED  = 6000; // 6 secondes par carte
+            let pos = 0, realN = 0, timer = null, paused = false;
+
+            const track  = () => document.getElementById('articles-track');
+            const dotsEl = () => document.getElementById('articles-dots');
+
+            function setup() {
+                const t = track();
+                const origCards = Array.from(t.children);
+                realN = origCards.length;
+                // Cloner toutes les cartes → boucle invisible
+                origCards.forEach(c => t.appendChild(c.cloneNode(true)));
+                buildDots();
+                moveTo(0, false);
+                startTimer();
+            }
+
+            function buildDots() {
+                const d = dotsEl(); if (!d) return;
+                d.innerHTML = '';
+                for (let i = 0; i < realN; i++) {
+                    const btn = document.createElement('button');
+                    btn.className = dotClass(i === 0);
+                    btn.setAttribute('aria-label', 'Article ' + (i + 1));
+                    btn.onclick = () => { moveTo(i, true); resetTimer(); };
+                    d.appendChild(btn);
+                }
+            }
+
+            function dotClass(active) {
+                return 'h-2 rounded-full transition-all duration-300 ' +
+                       (active ? 'w-6 bg-indigo-500' : 'w-2 bg-slate-300 hover:bg-slate-400');
+            }
+
+            function moveTo(i, animate) {
+                const t = track();
+                t.style.transition = animate ? 'transform 550ms cubic-bezier(0.4,0,0.2,1)' : 'none';
+                t.style.transform  = `translateX(-${i * CARD_W}px)`;
+                pos = i;
+                // Mise à jour des points (modulo les vraies cartes)
+                document.querySelectorAll('#articles-dots button').forEach((b, j) => {
+                    b.className = dotClass(j === pos % realN);
+                });
+            }
+
+            function advance() {
+                if (paused) return;
+                const next = pos + 1;
+                moveTo(next, true);
+                // Quand on atteint les clones, on reboucle silencieusement
+                if (next >= realN) {
+                    setTimeout(() => moveTo(0, false), 600);
+                }
+            }
+
+            function startTimer() { timer = setInterval(advance, SPEED); }
+            function resetTimer() { clearInterval(timer); startTimer(); }
+
+            // Pause au survol
+            const outer = () => document.getElementById('articles-track-outer');
+            document.addEventListener('DOMContentLoaded', () => {
+                const o = outer();
+                if (o) {
+                    o.addEventListener('mouseenter', () => { paused = true; });
+                    o.addEventListener('mouseleave', () => { paused = false; });
+                }
+            });
+
+            // Flèches manuelles
+            window.scrollArticles = function(dir) {
+                let n = (pos + dir + realN) % realN;
+                moveTo(n, true);
+                resetTimer();
+            };
+
+            document.addEventListener('DOMContentLoaded', setup);
+        })();
 
         // --- LIGHTBOX ---
         function openLightbox(src) {
