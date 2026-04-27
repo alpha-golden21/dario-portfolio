@@ -93,7 +93,6 @@
                                 <i class="fa-solid fa-shield-halved"></i> BTS SIO - Option SISR
                             </div>
                             <h1 class="text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">
-                                Bonjour, je suis <br class="hidden lg:block"/>
                                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Dario Demange</span>
                             </h1>
                             <p class="text-lg lg:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -2152,31 +2151,34 @@ Write-Host "RAM libre : $ramFree Go"`,
                     cat: "Exantis", type: "Exantis",
                     period: "01/08/2025 – 20/08/2025",
                     icon: "fa-solid fa-arrow-right-arrow-left text-sky-500",
-                    desc: "<strong>Situation :</strong> Un client utilise un serveur <code>TSE/RDS</code> (Terminal Server vieillissant) comme poste de travail mutualisé — migration vers Microsoft 365.<br><br><strong>Procédure :</strong> Audit des applications métier installées sur le <code>RDS</code>. Vérification de la compatibilité cloud. Migration des profils utilisateurs et données vers <code>OneDrive</code>/<code>SharePoint</code> via <strong>Remote Desktop Manager</strong>. Attribution des licences <code>M365 Business Standard</code>. Configuration des clients <code>Outlook</code>, <code>Teams</code>. Formation des utilisateurs finaux à la nouvelle interface. Clôture et décommissionnement du TSE.<br><br><strong>Résultat :</strong> Client migré avec succès, suppression du serveur TSE, réduction des coûts d'infrastructure.",
+                    desc: "<strong>Situation :</strong> Un client utilise un serveur <code>TSE</code> unique comme environnement de travail mutualisé pour 14 utilisateurs — point de défaillance critique. Migration vers des postes locaux sécurisés avec intégration <strong>Microsoft 365</strong>.<br><br><strong>Procédure :</strong> Analyse des risques (méthode EBIOS) de l'architecture centralisée. Choix de la solution : suppression du TSE, déploiement de postes locaux joints au domaine <code>AD</code>. Sécurisation via <strong>BitLocker</strong> (clés Azure AD), synchronisation <strong>OneDrive</strong>, déploiement <strong>SentinelOne EDR</strong> sur chaque poste. Administration via <strong>Remote Desktop Manager</strong>.<br><br><strong>Résultat :</strong> Niveau de risque maximum réduit de 15 à 9. Serveur TSE décommissionné, infrastructure plus résiliente, aucun Single Point of Failure.",
                     images: ["RDM/Capture%20d%27%C3%A9cran%202026-04-15%20141203.png"],
-                    skills: ["RDS/TSE", "Microsoft 365", "OneDrive", "Remote Desktop Manager", "Migration Cloud"],
+                    skills: ["RDS/TSE", "Active Directory", "BitLocker", "OneDrive", "SentinelOne", "Remote Desktop Manager"],
                     detail: {
                         gradient: "from-sky-600 to-cyan-500",
                         icon: "fa-solid fa-arrow-right-arrow-left",
                         type: "Alternance Exantis – 2ème Année",
-                        context: "Un client d'Exantis utilisait un <strong>serveur TSE/RDS</strong> (Windows Server 2016) vieillissant comme environnement de travail mutualisé pour 12 utilisateurs. Projet de migration vers <strong>Microsoft 365</strong> pour supprimer ce point de défaillance unique et réduire les coûts d'infrastructure.",
+                        context: "Un client d'Exantis hébergeait l'ensemble des environnements de travail de ses <strong>14 utilisateurs</strong> sur un serveur <strong>TSE unique</strong> (Terminal Server), accompagné d'un contrôleur de domaine Active Directory et d'un serveur de fichiers. L'accès distant était assuré par un <strong>VPN IPSec FortiGate</strong>, sans aucun MFA. Cette centralisation constituait un <strong>Single Point of Failure</strong> critique : toute défaillance du TSE entraînait une interruption totale de l'activité. Par ailleurs, le logiciel métier migrait vers un modèle <strong>SaaS</strong>, rendant le TSE progressivement obsolète.",
                         ficheTitle: "Fiche Technique",
                         fiche: [
-                            { label: "Source", value: "Windows Server 2016 RDS (TSE)" },
-                            { label: "Cible", value: "Microsoft 365 Business Standard" },
-                            { label: "Outil migration", value: "Remote Desktop Manager (RDM)" },
-                            { label: "Stockage cloud", value: "OneDrive for Business, SharePoint" },
+                            { label: "Architecture source", value: "Serveur TSE + AD + Serveur de fichiers (3 VMs)" },
+                            { label: "Utilisateurs", value: "14 utilisateurs" },
+                            { label: "Architecture cible", value: "Postes locaux joints AD + Microsoft 365" },
+                            { label: "Protection endpoint", value: "SentinelOne EDR + SOC externe" },
+                            { label: "Chiffrement", value: "BitLocker (clés récupération Azure AD)" },
+                            { label: "Données utilisateurs", value: "OneDrive for Business + Beemo (serveurs)" },
+                            { label: "Outil d'administration", value: "Remote Desktop Manager (RDM)" },
                             { label: "Compétences BTS", value: "A3.3.1, B2.2, B3.3" }
                         ],
                         skills: [
-                            { code: "A3.3.1", label: "Migration de services on-premise vers le cloud" },
-                            { code: "B2.2", label: "Gestion des profils et données utilisateurs" },
-                            { code: "B3.3", label: "Formation utilisateurs finaux aux nouveaux outils" }
+                            { code: "A3.3.1", label: "Migration et évolution d'architecture système" },
+                            { code: "B2.2", label: "Sécurisation des postes et gestion des données utilisateurs" },
+                            { code: "B3.3", label: "Analyse des risques et défense en profondeur" }
                         ],
                         sections: [
                             {
-                                title: "Audit du Serveur TSE Existant",
-                                text: "Analyse complète de l'environnement TSE avant migration : inventaire des <strong>applications installées</strong> (compatibilité cloud ?), cartographie des dossiers utilisateurs (<code>\\serveur\\Users\\</code>), identification des imprimantes réseau mappées, des lecteurs partagés et des accès spécifiques. Le serveur hébergeait 12 sessions simultanées avec profils itinérants."
+                                title: "Analyse des Risques — Architecture TSE Initiale",
+                                text: "Une analyse des risques inspirée de la méthode <strong>EBIOS Risk Manager</strong> (ANSSI) a été conduite sur l'architecture existante. La centralisation de 14 sessions sur un serveur unique générait deux scénarios à <strong>niveau de risque 15/25</strong> : compromission globale du TSE et propagation d'un ransomware à l'ensemble des utilisateurs via les lecteurs réseaux partagés. L'absence de MFA sur le VPN IPSec constituait un facteur aggravant. Cette analyse a objectivé la nécessité d'une évolution architecturale plutôt qu'un simple renforcement ponctuel."
                             },
                             {
                                 title: "Gestion des Connexions avec Remote Desktop Manager",
@@ -2184,24 +2186,33 @@ Write-Host "RAM libre : $ramFree Go"`,
                                 images: ["RDM/Capture%20d%27%C3%A9cran%202026-04-15%20141203.png"]
                             },
                             {
-                                title: "Migration des Données vers OneDrive",
-                                text: "Les profils utilisateurs et leurs données (<code>Documents</code>, <code>Bureau</code>, <code>Téléchargements</code>) sont migrés vers <strong>OneDrive for Business</strong>. Configuration de la <strong>redirection de dossiers</strong> via GPO pour que les utilisateurs retrouvent leurs fichiers automatiquement après la migration. Les dossiers partagés sont déplacés vers <strong>SharePoint</strong>.",
-                                code: `# Configuration synchronisation OneDrive via PowerShell
-$tenantId = "xxxxx-xxxx-xxxx-xxxx"
-$oneDriveSetup = "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
-& $oneDriveSetup /configure_business:$tenantId /silentConfig`
+                                title: "Migration des Postes — Intégration AD & Durcissement",
+                                text: "Chaque poste a été intégré au domaine <strong>Active Directory</strong> pour recevoir automatiquement les GPO de sécurité (<code>GPO_Securite_Postes</code> : USB restreints, pare-feu actif, verrouillage session). Durant l'installation, l'utilisateur était temporairement ajouté aux administrateurs locaux pour installer les logiciels métiers, puis ce privilège était retiré (<strong>principe du moindre privilège</strong>). Les mises à jour Windows automatiques ont été activées sur tous les postes.",
+                                code: `# Vérifier les GPO appliquées après intégration AD
+gpresult /r
+# Forcer l'application immédiate des GPO
+gpupdate /force`
                             },
                             {
-                                title: "Formation & Décommissionnement TSE",
-                                text: "Accompagnement des 12 utilisateurs lors de la <strong>transition vers Microsoft 365</strong> : prise en main d'Outlook, Teams et OneDrive. Vérification que tous les accès sont opérationnels avant le décommissionnement. Une fois la migration validée par le client, le serveur TSE est éteint et les licences Windows Server libérées."
+                                title: "BitLocker + OneDrive — Protection des Données",
+                                text: "<strong>BitLocker</strong> a été activé sur le disque système de chaque poste. Les <strong>clés de récupération sont automatiquement stockées dans Azure Active Directory</strong>, garantissant leur disponibilité en cas de perte ou vol du poste. En parallèle, <strong>OneDrive for Business</strong> a été configuré pour synchroniser les dossiers connus (Bureau, Documents, Images), assurant la continuité des données utilisateurs et une sauvegarde externalisée. Les serveurs restants (AD, fichiers) sont protégés par la solution <strong>Beemo</strong>.",
+                                code: `# Vérifier l'état BitLocker
+manage-bde -status C:
+# Configurer la sauvegarde OneDrive des dossiers connus (via GPO)
+# HKLM\\SOFTWARE\\Policies\\Microsoft\\OneDrive
+# KFMSilentOptIn = <TenantID>`
+                            },
+                            {
+                                title: "Déploiement SentinelOne EDR",
+                                text: "Pour compenser la disparition du modèle centralisé et éviter une augmentation incontrôlée de la surface d'attaque, <strong>SentinelOne EDR</strong> a été déployé sur chaque poste avec supervision assurée par un <strong>SOC externe</strong>. La solution assure une détection comportementale avancée : chiffrement massif, élévation de privilèges, mouvements latéraux. Un poste compromis peut être isolé automatiquement du réseau sans intervention manuelle. Après migration, le niveau de risque maximum passe de <strong>15 à 9</strong> — chaque incident est désormais contenu à un seul poste."
                             }
                         ],
                         stats: [
-                            { val: "12 users", lbl: "Migrés vers M365" },
-                            { val: "TSE → Cloud", lbl: "Infrastructure" },
-                            { val: "OneDrive", lbl: "Données migrées" }
+                            { val: "14 users", lbl: "Postes migrés" },
+                            { val: "15 → 9", lbl: "Risque max réduit" },
+                            { val: "0 SPF", lbl: "Single Point of Failure" }
                         ],
-                        conclusion: "La migration TSE → M365 est un projet de modernisation infrastructure complet : audit, planification, migration de données, configuration cloud et formation utilisateurs. Ce type de mission, très courant en ESN, démontre la capacité à gérer un projet de bout en bout avec impact direct sur le client."
+                        conclusion: "Cette migration illustre une démarche complète de réduction de criticité : analyse des risques EBIOS, choix architectural justifié, sécurisation en profondeur (AD, GPO, BitLocker, OneDrive, SentinelOne EDR). La suppression du TSE ne relevait pas uniquement d'une contrainte budgétaire — elle a permis une amélioration mesurable de la posture de sécurité, avec un niveau de risque maximum réduit de 15 à 9."
                     }
                 },
                 {
