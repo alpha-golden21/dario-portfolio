@@ -1986,53 +1986,53 @@ www   →  dario-demange.github.io
                     cat: "Exantis", type: "Exantis",
                     period: "01/10/2024 – 01/05/2026",
                     icon: "fa-solid fa-hard-drive text-slate-500",
-                    desc: "<strong>Situation :</strong> Reconditionnement et déploiement de postes clients pour plusieurs établissements.<br><br><strong>Procédure :</strong> Réception et inventaire des machines dans l'atelier Exantis. Remplacement de composants : <code>HDD → SSD NVMe</code>, ajout de <code>RAM</code> DDR4. Installation propre de <strong>Windows 11 Pro</strong>. Jonction au domaine <code>Active Directory</code> client. Paramétrage <code>TCP/IP</code>, mapping imprimantes réseau, installation logiciels métier. Livraison et mise en service sur site.<br><br><strong>Résultat :</strong> Plusieurs dizaines de postes reconditionnés et déployés chez les clients Exantis.",
+                    desc: "<strong>Situation :</strong> Activité récurrente chez Exantis — réception de postes en atelier, remise en état matérielle et déploiement complet pour les clients (écoles, PME, associations).<br><br><strong>Procédure :</strong> Diagnostic matériel à la réception (RAM, disque, batterie). Interventions : ajout de RAM, remplacement de batterie, nettoyage des composants. Installation des logiciels de base via <strong>Ninite</strong>, Adobe, pilotes et mises à jour Windows. Configuration personnalisée par client : VPN, antivirus, copieur, domaine, agent <strong>Atera</strong> — avec des scripts pour automatiser les tâches répétitives. Diagnostic et transfert de données sur les remplacements de poste.<br><br><strong>Résultat :</strong> Plus d'une centaine de postes préparés et livrés opérationnels chez les clients Exantis.",
                     images: ["Atelier%20et%20prepa%20poste/Atelier.png", "Atelier%20et%20prepa%20poste/Bureau.png"],
-                    skills: ["Hardware", "Windows 11", "Active Directory", "TCP/IP", "Déploiement"],
+                    skills: ["Hardware", "Ninite", "Atera Scripts", "Windows 11", "Diagnostic", "Déploiement"],
                     detail: {
                         gradient: "from-slate-600 to-slate-500",
                         icon: "fa-solid fa-hard-drive",
                         type: "Alternance Exantis – 1ère Année",
-                        context: "Dans le cadre de l'alternance chez Exantis, réception, préparation et déploiement de postes clients pour plusieurs établissements scolaires et PME. L'atelier sert de point central pour toutes les opérations matérielles.",
+                        context: "Activité récurrente chez Exantis : réception de postes en atelier, remise en état matérielle, installation complète et configuration personnalisée selon le client avant livraison sur site.",
                         ficheTitle: "Fiche Technique",
                         fiche: [
                             { label: "Matériel traité", value: "PC portables & fixes, stations de travail" },
-                            { label: "Upgrade type", value: "HDD → SSD NVMe, ajout RAM DDR4" },
-                            { label: "OS déployé", value: "Windows 11 Pro (image maîtresse)" },
-                            { label: "Intégration", value: "Jonction domaine Active Directory" },
+                            { label: "Interventions matérielles", value: "Ajout RAM, remplacement batterie, nettoyage" },
+                            { label: "Logiciels de base", value: "Ninite, Adobe, pilotes, mises à jour Windows" },
+                            { label: "Config. client", value: "VPN, antivirus, copieur, domaine, agent Atera" },
                             { label: "Compétences BTS", value: "A1.1.1, A1.2.1, A3.1.1" }
                         ],
                         skills: [
-                            { code: "A1.1.1", label: "Analyse et préparation des postes à déployer" },
-                            { code: "A1.2.1", label: "Installation composants matériels (SSD, RAM)" },
-                            { code: "A3.1.1", label: "Déploiement OS et jonction au domaine AD" }
+                            { code: "A1.1.1", label: "Diagnostic matériel et logiciel des postes" },
+                            { code: "A1.2.1", label: "Upgrade composants matériels (RAM, batterie)" },
+                            { code: "A3.1.1", label: "Installation, configuration et remise en service" }
                         ],
                         sections: [
                             {
-                                title: "Atelier — Réception & Diagnostic",
-                                text: "Chaque lot de machines arrive à l'atelier Exantis. Les postes sont inventoriés, diagnostiqués (test mémoire, SMART des disques, état de la batterie pour les portables) et triés selon leur état. Les défaillances matérielles sont identifiées avant toute intervention.",
+                                title: "Réception & Diagnostic en atelier",
+                                text: "Chaque lot de machines arrive à l'atelier Exantis. Les postes sont inventoriés et diagnostiqués : test de la mémoire RAM, vérification de l'état du disque (SMART), contrôle de la batterie sur les portables. On identifie ainsi ce qui doit être remplacé ou réparé avant même d'allumer le poste pour la première fois.",
                                 images: ["Atelier%20et%20prepa%20poste/Atelier.png"]
                             },
                             {
-                                title: "Upgrade Matériel",
-                                text: "Remplacement systématique des <strong>HDD mécaniques par des SSD NVMe</strong> pour améliorer les performances (temps de démarrage réduit de ~60s à ~10s). Ajout de barrettes <strong>RAM DDR4</strong> pour atteindre 8 ou 16 Go selon les besoins. Nettoyage des ventilateurs et renouvellement de la pâte thermique sur les processeurs."
+                                title: "Upgrade matériel — RAM, batterie et nettoyage",
+                                text: "Les interventions les plus courantes sont l'<strong>ajout ou le remplacement de RAM</strong> pour améliorer les performances (passage à 8 ou 16 Go selon les besoins du client), le <strong>remplacement de batterie</strong> sur les portables dont l'autonomie est trop faible pour un usage professionnel, et le <strong>nettoyage complet</strong> des machines : dépoussiérage des ventilateurs, soufflage des composants et renouvellement de la pâte thermique pour éviter la surchauffe. Ces interventions évitent au client d'acheter du matériel neuf inutilement."
                             },
                             {
-                                title: "Déploiement Windows 11 & Jonction AD",
-                                text: "Installation de <strong>Windows 11 Pro</strong> via image ISO ou clé USB bootable. Configuration BIOS : démarrage UEFI, Secure Boot activé, TPM 2.0 vérifié. Après installation : jonction au domaine <strong>Active Directory</strong> client, mapping des lecteurs réseau, installation des logiciels métier (suite Office, logiciels spécifiques client), configuration des imprimantes réseau TCP/IP.",
+                                title: "Installation des logiciels et configuration client",
+                                text: "Une fois le poste propre et à jour, installation des <strong>logiciels de base</strong> via <strong>Ninite</strong> (qui permet d'installer d'un coup : navigateurs, lecteurs PDF, 7-Zip, VLC…), Adobe Reader, les derniers <strong>pilotes</strong> et toutes les <strong>mises à jour Windows</strong>. Ensuite vient la <strong>configuration spécifique au client</strong> : connexion au <strong>VPN</strong> de l'entreprise, installation et paramétrage de l'<strong>antivirus</strong>, configuration du <strong>copieur réseau</strong>, jonction au <strong>domaine Active Directory</strong> si besoin, déploiement de l'<strong>agent Atera</strong> pour la télégestion. Des <strong>scripts Atera</strong> automatisent une partie de ces tâches pour gagner du temps sur les lots de plusieurs postes.",
                                 images: ["Atelier%20et%20prepa%20poste/Bureau.png"]
                             },
                             {
-                                title: "Supervision PRTG",
-                                text: "Une fois les postes déployés, suivi de la disponibilité réseau via <strong>PRTG Network Monitor</strong>. Les équipements clients (serveurs, switches, imprimantes) sont supervisés. Création d'alertes email en cas de panne. Outil utilisé en complément d'Atera pour les clients ne disposant pas de RMM."
+                                title: "Diagnostics, transferts de données et interventions diverses",
+                                text: "En dehors des préparations de postes neufs, j'interviens également sur des machines en panne : <strong>diagnostic logiciel</strong> (système corrompu, virus, profil Windows cassé) ou <strong>matériel</strong> (disque défaillant, RAM instable). Sur les remplacements de poste, je réalise le <strong>transfert de données</strong> de l'ancien vers le nouveau : récupération des documents, profil de messagerie, favoris, paramètres. L'objectif est que l'utilisateur retrouve son environnement de travail exactement comme avant."
                             }
                         ],
                         stats: [
-                            { val: "30+", lbl: "Postes reconditionnés" },
-                            { val: "SSD NVMe", lbl: "Upgrade systématique" },
-                            { val: "Multi-sites", lbl: "Déploiements" }
+                            { val: "100+", lbl: "Postes préparés" },
+                            { val: "Multi-clients", lbl: "Écoles, PME, associations" },
+                            { val: "0 rappel", lbl: "Postes livrés fonctionnels" }
                         ],
-                        conclusion: "Le reconditionnement de postes est une activité récurrente en ESN. Cette expérience a permis de maîtriser l'ensemble de la chaîne : diagnostic matériel, upgrade composants, déploiement OS, intégration AD — en conditions réelles chez des clients d'Exantis."
+                        conclusion: "La préparation de postes est une mission qui demande autant de rigueur que de méthode : chaque machine doit être livrée propre, à jour et prête à l'usage. Cette expérience m'a appris à travailler efficacement sur des lots importants, à diagnostiquer rapidement les pannes matérielles et logicielles, et à adapter la configuration de chaque poste aux besoins spécifiques du client."
                     }
                 },
                 {
