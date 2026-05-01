@@ -405,7 +405,7 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4 text-white">
                                 <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">Projet Majeur · 15/09 – 19/09/2025</span>
-                                <h3 class="text-xl font-bold leading-tight">Configuration de bornes WiFi sur un nouveau site avec leurs switch</h3>
+                                <h3 class="text-xl font-bold leading-tight">Configuration de bornes WiFi sur un nouveau site avec leurs switches</h3>
                             </div>
                         </div>
                         <div class="p-6 flex-1 flex flex-col">
@@ -645,15 +645,9 @@
 
                                 <p class="text-slate-700 leading-relaxed text-justify mb-6">Une contrainte énergétique a également été traitée : les ports alimentant les équipements des classes sont programmés pour couper automatiquement la nuit (22h–6h) et le week-end, réduisant la consommation électrique sans intervention manuelle.</p>
 
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
-                                        <img src="Atelier%20et%20prepa%20poste/Atelier.png" alt="Préparation switches en atelier Exantis" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm" style="max-height:240px;object-fit:cover;">
-                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-screwdriver-wrench mr-1"></i> Pré-configuration des switches en atelier — avant déploiement sur site</p>
-                                    </div>
-                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm">
-                                        <img src="Aruba/Alimentation%20ip.png" alt="Planification PoE horaire" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
-                                        <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-clock mr-1"></i> Affectation horaire <code>PoE+</code> — Coupure automatique nocturne</p>
-                                    </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-sm max-w-lg mx-auto">
+                                    <img src="Aruba/Alimentation%20ip.png" alt="Planification PoE horaire" class="w-full rounded-lg object-cover border border-slate-200 shadow-sm">
+                                    <p class="text-center text-xs text-slate-500 mt-3 font-medium uppercase tracking-wider"><i class="fa-solid fa-clock mr-1"></i> Affectation horaire <code>PoE+</code> — Coupure automatique nocturne</p>
                                 </div>
                             </div>
 
@@ -692,7 +686,7 @@
                                 </h2>
                                 <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-6">
                                     <h4 class="font-bold text-amber-800 mb-2 flex items-center gap-2"><i class="fa-solid fa-lightbulb"></i> Principale difficulté</h4>
-                                    <p class="text-slate-700 text-sm leading-relaxed">Il n'existait aucun plan de câblage de l'ancienne installation. J'ai dû identifier physiquement chaque câble avec un testeur de continuité pour savoir quel port correspondait à quelle prise murale dans quel bâtiment — et reconstruire la cartographie complète avant de pouvoir configurer les réseaux.</p>
+                                    <p class="text-slate-700 text-sm leading-relaxed">Les baies de brassage étaient situées en hauteur et le câblage existant était dans un état déplorable — câbles non étiquetés, enchevêtrés, sans aucune logique apparente. Démêler, identifier et re-étiqueter chaque lien avant même de pouvoir brancher les nouveaux switches a demandé un travail minutieux, à l'échelle, dans des espaces peu accessibles.</p>
                                 </div>
                                 <p class="text-slate-700 leading-relaxed text-justify">Ce projet a pleinement répondu au cahier des charges : réseau fiable, sécurisé et supervisable à distance depuis n'importe où. Il m'a permis de mettre en pratique sur une infrastructure réelle des compétences fondamentales — segmentation du réseau, gestion centralisée depuis le Cloud, alimentation des équipements par câble — dans un délai contraint de 3 jours avec zéro incident post-déploiement.</p>
                             </div>
@@ -768,7 +762,7 @@
                                 <i class="fa-solid fa-magnifying-glass-plus text-blue-400"></i> Cliquer sur une image pour l'agrandir
                             </div>
                         </div>
-                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Configuration de bornes WiFi sur un nouveau site avec leurs switch</h1>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Configuration de bornes WiFi sur un nouveau site avec leurs switches</h1>
 
                         <p class="text-lg text-slate-700 mb-12 leading-relaxed border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 rounded-r-xl font-medium">
                             <strong>Situation :</strong> Ouverture d'un nouveau site industriel pour le client LogiSud — un grand entrepôt logistique complètement vierge de toute connectivité. Mission : équiper le bâtiment d'un WiFi professionnel couvrant toutes les zones, avec un réseau séparé pour le personnel et un autre pour les visiteurs, le tout géré depuis le pare-feu déjà installé sur place.
@@ -2212,20 +2206,20 @@ www   →  dario-demange.github.io
                     cat: "Exantis", type: "Exantis",
                     period: "01/01/2025 – 01/04/2025",
                     icon: "fa-solid fa-shield-halved text-indigo-500",
-                    desc: "<strong>Situation :</strong> Déploiement et configuration des outils de supervision et sécurité du parc clients Exantis.<br><br><strong>Procédure :</strong> Déploiement de l'agent <strong>Atera</strong> sur les postes via <code>GPO</code> et script <code>PowerShell</code>. Configuration du tableau de bord : alertes disques, disponibilité des serveurs, taux de patching. Création de scripts d'automatisation (infos RAM, <code>Windows Update</code>, nettoyage, sync <code>Azure AD Connect</code>). Déploiement de l'agent <strong>SentinelOne</strong> (EDR/XDR) sur les endpoints — gestion de 330+ machines sur 8 sites clients.<br><br><strong>Résultat :</strong> Parc entièrement supervisé en temps réel, agents EDR actifs sur tous les sites.",
+                    desc: "<strong>Situation :</strong> Déploiement et configuration des outils de supervision et sécurité du parc clients Exantis.<br><br><strong>Procédure :</strong> Déploiement de l'agent <strong>Atera</strong> sur les postes via <code>GPO</code> et script <code>PowerShell</code>. Configuration du tableau de bord : alertes disques, disponibilité des serveurs, taux de patching. Création de scripts d'automatisation (infos RAM, <code>Windows Update</code>, nettoyage, sync <code>Azure AD Connect</code>). Déploiement de l'agent <strong>SentinelOne</strong> (EDR/XDR) sur les endpoints — gestion de 800+ machines sur 50+ clients.<br><br><strong>Résultat :</strong> Parc entièrement supervisé en temps réel, agents EDR actifs sur tous les sites.",
                     images: ["Atera/Dashboard.png", "S1/Capture%20d%27%C3%A9cran%202026-04-16%20111636.png"],
                     skills: ["Atera RMM", "SentinelOne EDR", "PowerShell", "GPO", "Supervision"],
                     detail: {
                         gradient: "from-indigo-600 to-purple-600",
                         icon: "fa-solid fa-shield-halved",
                         type: "Alternance Exantis – 1ère Année",
-                        context: "Déploiement et configuration des outils de supervision (<strong>Atera RMM</strong>) et de sécurité endpoint (<strong>SentinelOne EDR</strong>) sur l'ensemble du parc clients d'Exantis — 330+ machines réparties sur 8 sites.",
+                        context: "Déploiement et configuration des outils de supervision (<strong>Atera RMM</strong>) et de sécurité endpoint (<strong>SentinelOne EDR</strong>) sur l'ensemble du parc clients d'Exantis — 800+ machines réparties chez 50+ clients.",
                         ficheTitle: "Fiche Technique",
                         fiche: [
                             { label: "RMM", value: "Atera (agents Windows/Mac)" },
                             { label: "EDR/XDR", value: "SentinelOne Singularity" },
                             { label: "Déploiement agents", value: "GPO + script PowerShell" },
-                            { label: "Périmètre", value: "330+ endpoints, 8 sites clients" },
+                            { label: "Périmètre", value: "800+ endpoints, 50+ clients" },
                             { label: "Compétences BTS", value: "A1.4.1, B1.5, B3.1" }
                         ],
                         skills: [
@@ -2260,13 +2254,14 @@ Write-Host "RAM libre : $ramFree Go"`,
                             },
                             {
                                 title: "Résultats — Parc Entièrement Supervisé",
-                                text: "À l'issue du déploiement : <strong>100% des machines clientes</strong> équipées de l'agent Atera et de SentinelOne. Les alertes automatiques (disque critique, agent déconnecté, menace détectée) remontent en temps réel. Le taux de patching Windows est suivi et des campagnes de mise à jour planifiées permettent de maintenir le parc à jour."
+                                text: "À l'issue du déploiement : <strong>100% des machines clientes</strong> équipées de l'agent Atera et de SentinelOne. Les alertes automatiques (disque critique, agent déconnecté, menace détectée) remontent en temps réel. Le taux de patching Windows est suivi et des campagnes de mise à jour planifiées permettent de maintenir le parc à jour.",
+                                images: ["Atera/client.png"]
                             }
                         ],
                         autonomy: 4,
                         stats: [
-                            { val: "330+", lbl: "Endpoints supervisés" },
-                            { val: "8 sites", lbl: "Clients couverts" },
+                            { val: "800+", lbl: "Endpoints supervisés" },
+                            { val: "50+", lbl: "Clients couverts" },
                             { val: "SentinelOne", lbl: "EDR actif" }
                         ],
                         conclusion: "Ce projet de déploiement de masse a mis en pratique les notions de gestion de parc à grande échelle, d'automatisation PowerShell et de sécurité endpoint. L'expérience SentinelOne EDR est particulièrement valorisée dans le domaine de la cybersécurité, en complément des certifications BTS SIO SISR."
