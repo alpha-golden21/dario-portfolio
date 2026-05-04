@@ -330,8 +330,8 @@
                                     <span class="text-blue-600 font-bold text-sm">CCI Vaucluse</span>
                                     <span class="bg-blue-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Envisagée</span>
                                 </div>
-                                <h4 class="font-bold text-slate-800 mb-1">Licence Pro Cybersécurité</h4>
-                                <p class="text-sm text-slate-600">Poursuite d'études envisagée après le BTS SIO : Licence Professionnelle Cybersécurité à la CCI Vaucluse, pour approfondir la sécurité des SI, l'analyse d'incidents et la gestion des risques.</p>
+                                <h4 class="font-bold text-slate-800 mb-1">Bachelor Cybersécurité</h4>
+                                <p class="text-sm text-slate-600">Poursuite d'études envisagée après le BTS SIO : Bachelor Cybersécurité à la CCI Vaucluse, pour approfondir la sécurité des SI, l'analyse d'incidents et la gestion des risques.</p>
                             </div>
                         </div>
 
@@ -518,14 +518,6 @@
 
                         <div class="space-y-12">
                             <!-- Section 1 -->
-                            <div>
-                                <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
-                                    <span class="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold">1</span> Présentation de l'entreprise & Contexte
-                                </h2>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-4">Mon alternance se déroule chez <strong>Exantis Informatique</strong>, une SCOP (Société Coopérative et Participative) basée à Avignon, spécialisée en infogérance pour les PME et établissements scolaires de la région PACA.</p>
-                                <p class="text-slate-700 leading-relaxed text-justify mb-6">L'école Saint-André est un nouveau client d'Exantis, ayant changé de prestataire suite à une gestion désorganisée de l'ancien informaticien. Le réseau en place reposait sur des switches <strong>D-Link grand public non-manageables</strong>, ce qui rendait toute supervision ou segmentation impossible.</p>
-                            </div>
-
                             <!-- Section 2 -->
                             <div>
                                 <h2 class="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-slate-100 pb-3 flex items-center gap-3">
@@ -2336,7 +2328,7 @@ $oneDriveSetup = "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
                     icon: "fa-solid fa-school text-orange-500",
                     desc: "<strong>Situation :</strong> Interventions hebdomadaires en régie sur les établissements scolaires et PME clients d'Exantis (plusieurs sites, noms confidentiels).<br><br><strong>Procédure :</strong> Réception des tickets <strong>FreshService</strong> catégorie <em>Régie</em>. Connexion à distance via <code>RDP</code> pour diagnostic préalable. Déplacement sur site si nécessaire (caméras, imprimantes, réseau, postes). Interventions : brassage réseau, remplacement matériel, reconfiguration poste, intégration domaine <code>AD</code>, mise en place <code>Moodle</code>, assistance enseignants. Clôture des tickets dans FreshService avec compte-rendu.<br><br><strong>Résultat :</strong> Maintien opérationnel de plusieurs parcs informatiques, relation de confiance établie avec les équipes utilisateurs.",
                     images: ["Fresh%20Service/Ticket%20Regie.png", "Fresh%20Service/Exemple%20rouby.png"],
-                    skills: ["Régie", "FreshService", "RDP", "Support Proximité", "Active Directory"],
+                    skills: ["Régie", "FreshService", "RDP", "Support Proximité", "Active Directory", "Veyon", "Deep Freeze"],
                     detail: {
                         gradient: "from-orange-600 to-amber-500",
                         icon: "fa-solid fa-school",
@@ -2360,7 +2352,10 @@ $oneDriveSetup = "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
                               html: "Chaque établissement dispose d'un serveur local (souvent Windows Server) pour l'AD, les partages réseau et parfois un NAS. J'interviens pour : vérifier les sauvegardes, surveiller l'espace disque, redémarrer des services bloqués, vérifier les mises à jour. J'ai également configuré des <strong>partages réseau</strong> par classe et mis à jour des <strong>serveurs d'impression</strong> réseau.",
                               images: ["Fresh%20Service/Exemple%20rouby.png"] },
                             { num: 4, bgColor: "bg-amber-600", title: "Classes mobiles & Aide utilisateurs",
-                              html: "Les établissements utilisent des <strong>classes mobiles</strong> (chariots de tablettes ou d'ordinateurs portables). Je gère leur maintenance : mise à jour des systèmes, réintégration au domaine AD quand un poste est sorti du réseau, remplacement de batteries ou écrans. L'assistance aux utilisateurs (enseignants, CPE, vie scolaire) est aussi une part importante : problèmes de connexion, logiciels bloqués, imprimantes réseau." }
+                              html: "Les établissements utilisent des <strong>classes mobiles</strong> (chariots de tablettes ou d'ordinateurs portables). Je gère leur maintenance : mise à jour des systèmes, réintégration au domaine AD quand un poste est sorti du réseau, remplacement de batteries ou écrans. L'assistance aux utilisateurs (enseignants, CPE, vie scolaire) est aussi une part importante : problèmes de connexion, logiciels bloqués, imprimantes réseau." },
+                            { num: 5, bgColor: "bg-orange-700", title: "Veyon & Deep Freeze — Outils spécifiques aux salles informatiques",
+                              html: "<strong>Veyon</strong> est un logiciel de supervision et de contrôle des postes en salle informatique. Je le déploie et le configure dans les établissements pour permettre aux enseignants de visualiser tous les écrans élèves, d'envoyer des commandes groupées (verrouiller les postes, couper internet, lancer un programme) ou de prendre la main à distance sur un poste. Un outil très apprécié en classe.<br><br><strong>Deep Freeze</strong> est une solution de protection des postes : à chaque redémarrage, le poste revient à son état d'origine. Idéal en salle informatique scolaire — peu importe ce qu'un élève installe ou modifie, la machine est propre au cours suivant. Je l'installe et le configure selon les besoins de chaque établissement.",
+                              images: ["veyon.jpg"] }
                         ],
                         autonomy: 4,
                         stats: [{ val: "Hebdo", lbl: "Présence sur site" }, { val: "AD + Serveurs", lbl: "Cœur des missions" }, { val: "Multi-sites", lbl: "Établissements" }],
